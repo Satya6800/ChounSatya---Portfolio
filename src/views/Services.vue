@@ -1,0 +1,509 @@
+<template>
+  <section class="services-page">
+    <div class="background-layer">
+      <div class="bubbles">
+        <div class="bubble" v-for="n in 10" :key="n"></div>
+      </div>
+      <div class="grid-overlay"></div>
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+    </div>
+
+    <div class="page-content">
+      <div class="section-head">
+        <span class="eyebrow">Services</span>
+        <h2>What I Deliver</h2>
+        <p>From polished web apps to scalable backend systems, I provide modern solutions built for speed, usability, and growth.</p>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card">
+          <div class="service-icon icon-design">✦</div>
+          <h3>UI / UX Design</h3>
+          <p>Crafting intuitive digital experiences with clean layouts, strong typography, and a user-first approach.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon icon-code">⧉</div>
+          <h3>Web Development</h3>
+          <p>Building responsive, fast websites using Vue, JavaScript, and modern frontend architectures.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon icon-api">⚡</div>
+          <h3>API & Backend</h3>
+          <p>Designing secure RESTful APIs, database schemas, and server-side logic for reliable app performance.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon icon-speed">✧</div>
+          <h3>Performance Tuning</h3>
+          <p>Optimizing load times, reducing bundle size, and improving the experience across desktop and mobile.</p>
+        </article>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-card">
+          <span class="feature-badge">Strategy</span>
+          <h4>Consultative Planning</h4>
+          <p>Aligning your project goals with technology choices and growth-driven product features.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-badge">Delivery</span>
+          <h4>Fast Iteration</h4>
+          <p>Regular updates, clean code reviews, and production-ready releases for every milestone.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-badge">Support</span>
+          <h4>Continued Growth</h4>
+          <p>Post-launch maintenance, performance monitoring, and feature expansion guidance.</p>
+        </div>
+      </div>
+
+      <section class="certificates-section">
+        <div class="section-head small-head">
+          <span class="eyebrow">Certifications</span>
+          <h2>My Professional Certificates</h2>
+          <p>Trusted credentials and training that reinforce the quality of the work I deliver across web development, design, and cloud platforms.</p>
+        </div>
+
+        <div class="certificate-carousel">
+          <div class="certificate-track">
+            <article class="certificate-card">
+              <img class="cert-thumb" src="@/assets/image/worksync.png" alt="Certificate Thumbnail" />
+              <div class="certificate-meta">
+                <h4>UI Design Certification</h4>
+                <p>Mastering modern interface principles and user-centered design processes.</p>
+              </div>
+            </article>
+            <article class="certificate-card">
+              <img class="cert-thumb" src="@/assets/image/worksync.png" alt="Certificate Thumbnail" />
+              <div class="certificate-meta">
+                <h4>Vue.js Professional</h4>
+                <p>Advanced skills in building reactive applications with Vue 3 and Vuex.</p>
+              </div>
+            </article>
+            <article class="certificate-card">
+              <img class="cert-thumb" src="@/assets/image/worksync.png" alt="Certificate Thumbnail" />
+              <div class="certificate-meta">
+                <h4>JavaScript Mastery</h4>
+                <p>Deep understanding of ES6+, async programming, and modular architecture.</p>
+              </div>
+            </article>
+            <article class="certificate-card">
+              <img class="cert-thumb" src="@/assets/image/worksync.png" alt="Certificate Thumbnail" />
+              <div class="certificate-meta">
+                <h4>API Development</h4>
+                <p>Designing and documenting RESTful services for scalable backend systems.</p>
+              </div>
+            </article>
+            <article class="certificate-card">
+              <img class="cert-thumb" src="@/assets/image/worksync.png" alt="Certificate Thumbnail" />
+              <div class="certificate-meta">
+                <h4>Node.js Backend</h4>
+                <p>Building secure server-side applications and real-time services with Node.</p>
+              </div>
+            </article>
+            <article class="certificate-card">
+              <img class="cert-thumb" src="@/assets/image/worksync.png" alt="Certificate Thumbnail" />
+              <div class="certificate-meta">
+                <h4>Database Design</h4>
+                <p>Creating efficient schemas, migrations, and query optimization strategies.</p>
+              </div>
+            </article>
+            <article class="certificate-card">
+              <img class="cert-thumb" src="@/assets/image/worksync.png" alt="Certificate Thumbnail" />
+              <div class="certificate-meta">
+                <h4>Git Workflow</h4>
+                <p>Professional source control, branching, and collaborative development practices.</p>
+              </div>
+            </article>
+            <article class="certificate-card">
+              <img class="cert-thumb" src="@/assets/image/worksync.png" alt="Certificate Thumbnail" />
+              <div class="certificate-meta">
+                <h4>Cloud Deployment</h4>
+                <p>Deploying apps on cloud platforms with CI/CD and automated release pipelines.</p>
+              </div>
+            </article>
+            <article class="certificate-card">
+              <img class="cert-thumb" src="@/assets/image/worksync.png" alt="Certificate Thumbnail" />
+              <div class="certificate-meta">
+                <h4>React.js Certified</h4>
+                <p>Component-driven UI development with hooks, routers, and state management.</p>
+              </div>
+            </article>
+            <article class="certificate-card">
+              <img class="cert-thumb" src="@/assets/image/worksync.png" alt="Certificate Thumbnail" />
+              <div class="certificate-meta">
+                <h4>HTML5 Expert</h4>
+                <p>Modern semantic markup and accessible structure for all screen sizes.</p>
+              </div>
+            </article>
+            <article class="certificate-card">
+              <img class="cert-thumb" src="@/assets/image/worksync.png" alt="Certificate Thumbnail" />
+              <div class="certificate-meta">
+                <h4>CSS & Layout</h4>
+                <p>Styling responsive interfaces with CSS Grid, Flexbox, and animation best practices.</p>
+              </div>
+            </article>
+            <article class="certificate-card">
+              <img class="cert-thumb" src="@/assets/image/worksync.png" alt="Certificate Thumbnail" />
+              <div class="certificate-meta">
+                <h4>TypeScript</h4>
+                <p>Strong typing and maintainable code in front-end and backend applications.</p>
+              </div>
+            </article>
+            <article class="certificate-card">
+              <img class="cert-thumb" src="@/assets/image/worksync.png" alt="Certificate Thumbnail" />
+              <div class="certificate-meta">
+                <h4>Tailwind CSS</h4>
+                <p>Utility-first styling for fast prototyping and consistent UI design.</p>
+              </div>
+            </article>
+            <article class="certificate-card">
+              <img class="cert-thumb" src="@/assets/image/worksync.png" alt="Certificate Thumbnail" />
+              <div class="certificate-meta">
+                <h4>Figma Workflow</h4>
+                <p>Design handoff, prototyping, and collaborative interface creation.</p>
+              </div>
+            </article>
+            <article class="certificate-card">
+              <img class="cert-thumb" src="@/assets/image/worksync.png" alt="Certificate Thumbnail" />
+              <div class="certificate-meta">
+                <h4>System Design</h4>
+                <p>Architecting modular applications with scalability and reliability in mind.</p>
+              </div>
+            </article>
+            <article class="certificate-card">
+              <img class="cert-thumb" src="@/assets/image/worksync.png" alt="Certificate Thumbnail" />
+              <div class="certificate-meta">
+                <h4>Project Leadership</h4>
+                <p>Coordinating teams, timelines, and client communication for successful launches.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+</template>
+
+<script setup></script>
+
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700&display=swap');
+
+.services-page {
+  position: relative;
+  min-height: 100vh;
+  padding: 110px 0 80px;
+  background: radial-gradient(circle at top left, rgba(0, 212, 255, 0.12), transparent 28%),
+              radial-gradient(circle at bottom right, rgba(123, 104, 238, 0.14), transparent 30%),
+              linear-gradient(160deg, #071119 0%, #0b1d3a 100%);
+  color: #eef2ff;
+  overflow: hidden;
+  font-family: 'Syne', sans-serif;
+}
+
+.background-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.bubbles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(120,200,255,0.16), rgba(60,120,220,0.05));
+  border: 1px solid rgba(120,200,255,0.12);
+  animation: floatBubble linear infinite;
+}
+
+@keyframes floatBubble {
+  0%   { transform: translateY(0) scale(1); opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 0.55; }
+  100% { transform: translateY(-110vh) scale(1.05); opacity: 0; }
+}
+
+.bubble:nth-child(1)  { width:14px; height:14px; left:8%;  bottom:-12%; animation-duration:10s; animation-delay:0s; }
+.bubble:nth-child(2)  { width:22px; height:22px; left:18%; bottom:-10%; animation-duration:12s; animation-delay:1.5s; }
+.bubble:nth-child(3)  { width:10px; height:10px; left:26%; bottom:-8%; animation-duration:8s; animation-delay:2.8s; }
+.bubble:nth-child(4)  { width:28px; height:28px; left:39%; bottom:-12%; animation-duration:14s; animation-delay:0.8s; }
+.bubble:nth-child(5)  { width:18px; height:18px; left:52%; bottom:-9%; animation-duration:9s; animation-delay:1.2s; }
+.bubble:nth-child(6)  { width:12px; height:12px; left:68%; bottom:-10%; animation-duration:11s; animation-delay:3s; }
+.bubble:nth-child(7)  { width:24px; height:24px; left:75%; bottom:-11%; animation-duration:13s; animation-delay:0.6s; }
+.bubble:nth-child(8)  { width:16px; height:16px; left:85%; bottom:-12%; animation-duration:10s; animation-delay:2.2s; }
+.bubble:nth-child(9)  { width:8px;  height:8px;  left:92%; bottom:-8%; animation-duration:7s; animation-delay:1.1s; }
+.bubble:nth-child(10) { width:34px; height:34px; left:45%; bottom:-13%; animation-duration:16s; animation-delay:4s; }
+
+.grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 42px 42px;
+  opacity: 0.2;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(110px);
+  opacity: 0.75;
+}
+
+.orb-1 {
+  width: 160px;
+  height: 160px;
+  top: 10%;
+  right: 10%;
+  background: rgba(0, 212, 255, 0.18);
+}
+
+.orb-2 {
+  width: 220px;
+  height: 220px;
+  bottom: 12%;
+  left: 6%;
+  background: rgba(139, 92, 246, 0.15);
+}
+
+.page-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section-head {
+  max-width: 680px;
+  margin-bottom: 48px;
+}
+
+.eyebrow {
+  display: inline-block;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  background: rgba(0, 212, 255, 0.15);
+  color: #b9f2ff;
+  letter-spacing: 0.15em;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.section-head h2 {
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  margin: 1rem 0 1rem;
+  line-height: 1.05;
+}
+
+.section-head p {
+  color: rgba(238,242,255,0.75);
+  line-height: 1.85;
+  max-width: 620px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-bottom: 42px;
+}
+
+.service-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 28px;
+  padding: 28px;
+  backdrop-filter: blur(18px);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0, 212, 255, 0.25);
+}
+
+.service-icon {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  margin-bottom: 18px;
+  font-size: 1.5rem;
+  color: #fff;
+  background: rgba(0, 212, 255, 0.18);
+}
+
+.icon-design { background: linear-gradient(135deg, rgba(248, 113, 113, 0.16), rgba(251, 191, 36, 0.16)); }
+.icon-code { background: linear-gradient(135deg, rgba(79, 70, 229, 0.18), rgba(99, 102, 241, 0.14)); }
+.icon-api { background: linear-gradient(135deg, rgba(34, 197, 94, 0.18), rgba(16, 185, 129, 0.14)); }
+.icon-speed { background: linear-gradient(135deg, rgba(14, 165, 233, 0.18), rgba(59, 130, 246, 0.14)); }
+
+.service-card h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+}
+
+.service-card p {
+  margin: 0;
+  color: rgba(238,242,255,0.78);
+  line-height: 1.8;
+}
+
+.feature-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.feature-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 26px;
+  padding: 26px;
+  backdrop-filter: blur(16px);
+}
+
+.feature-badge {
+  display: inline-flex;
+  padding: 0.5rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  color: #a5f3fc;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.feature-card h4 {
+  margin: 1rem 0 0.75rem;
+}
+
+.feature-card p {
+  margin: 0;
+  color: rgba(238,242,255,0.75);
+  line-height: 1.8;
+}
+
+.certificates-section {
+  margin-top: 60px;
+}
+
+.small-head {
+  max-width: 840px;
+  margin-bottom: 32px;
+}
+
+.certificate-carousel {
+  overflow: hidden;
+  position: relative;
+  margin: 0 -1.5rem;
+  padding: 10px 0 0;
+}
+
+.certificate-track {
+  display: flex;
+  gap: 22px;
+  padding-left: 1.5rem;
+  animation: scrollCertificates 18s linear infinite;
+}
+
+.certificate-card {
+  flex: 0 0 320px;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 24px;
+  overflow: hidden;
+  backdrop-filter: blur(16px);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 212, 255, 0.25);
+}
+
+.cert-thumb {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.certificate-meta {
+  padding: 20px;
+}
+
+.certificate-meta h4 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+.certificate-meta p {
+  margin: 0;
+  color: rgba(238,242,255,0.78);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+@keyframes scrollCertificates {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 1180px) {
+  .certificate-track {
+    gap: 18px;
+  }
+}
+
+@media (max-width: 900px) {
+  .service-grid,
+  .feature-row {
+    grid-template-columns: 1fr;
+  }
+
+  .certificate-card {
+    flex: 0 0 100%;
+    min-width: 100%;
+  }
+
+  .certificate-carousel {
+    margin: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .certificate-card {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .services-page {
+    padding-top: 90px;
+  }
+
+  .section-head h2 {
+    font-size: 2.2rem;
+  }
+}
+</style>
