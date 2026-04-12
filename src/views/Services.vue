@@ -13,14 +13,16 @@
       <div class="section-head">
         <span class="eyebrow">Services</span>
         <h2>What I Deliver</h2>
-        <p>From polished web apps to scalable backend systems, I provide modern solutions built for speed, usability, and growth.</p>
+        <p>From polished web apps to scalable backend systems, I provide modern solutions built for speed, usability,
+          and growth.</p>
       </div>
 
       <div class="service-grid">
         <article class="service-card">
           <div class="service-icon icon-design">✦</div>
           <h3>UI / UX Design</h3>
-          <p>Crafting intuitive digital experiences with clean layouts, strong typography, and a user-first approach.</p>
+          <p>Crafting intuitive digital experiences with clean layouts, strong typography, and a user-first approach.
+          </p>
         </article>
 
         <article class="service-card">
@@ -64,7 +66,8 @@
         <div class="section-head small-head">
           <span class="eyebrow">Certifications</span>
           <h2>My Professional Certificates</h2>
-          <p>Trusted credentials and training that reinforce the quality of the work I deliver across web development, design, and cloud platforms.</p>
+          <p>Trusted credentials and training that reinforce the quality of the work I deliver across web development,
+            design, and cloud platforms.</p>
         </div>
 
         <div class="certificate-carousel">
@@ -109,9 +112,8 @@ const certificates = [
   { img: AWS2, title: 'AWS Academy', desc: 'AWS Academy Graduate - AWS Academy Cloud Foundations.' },
   { img: AWS3, title: 'AWS Academy', desc: 'AWS Academy Graduate - AWS Academy Data Engineering.' },
   { img: AWS4, title: 'AWS Academy', desc: 'AWS Academy Graduate - AWS Academy Machine Learning Foundations.' },
-  
   { img: fortinet, title: 'Fortinet Training', desc: 'Fortinet Certified Associate in Cybersecurity.' },
-   { img: fortinet1, title: 'Fortinet Training', desc: 'Fortinet Certified Fundamentals in Cybersecurity.' },
+  { img: fortinet1, title: 'Fortinet Training', desc: 'Fortinet Certified Fundamentals in Cybersecurity.' },
 ]
 </script>
 
@@ -123,8 +125,8 @@ const certificates = [
   min-height: 100vh;
   padding: 110px 0 80px;
   background: radial-gradient(circle at top left, rgba(0, 212, 255, 0.12), transparent 28%),
-              radial-gradient(circle at bottom right, rgba(123, 104, 238, 0.14), transparent 30%),
-              linear-gradient(160deg, #071119 0%, #0b1d3a 100%);
+    radial-gradient(circle at bottom right, rgba(123, 104, 238, 0.14), transparent 30%),
+    linear-gradient(160deg, #071119 0%, #0b1d3a 100%);
   color: #eef2ff;
   overflow: hidden;
   font-family: 'Syne', sans-serif;
@@ -146,34 +148,126 @@ const certificates = [
 .bubble {
   position: absolute;
   border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, rgba(120,200,255,0.16), rgba(60,120,220,0.05));
-  border: 1px solid rgba(120,200,255,0.12);
+  background: radial-gradient(circle at 30% 30%, rgba(120, 200, 255, 0.16), rgba(60, 120, 220, 0.05));
+  border: 1px solid rgba(120, 200, 255, 0.12);
   animation: floatBubble linear infinite;
 }
 
 @keyframes floatBubble {
-  0%   { transform: translateY(0) scale(1); opacity: 0; }
-  10%  { opacity: 1; }
-  90%  { opacity: 0.55; }
-  100% { transform: translateY(-110vh) scale(1.05); opacity: 0; }
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0.55;
+  }
+
+  100% {
+    transform: translateY(-110vh) scale(1.05);
+    opacity: 0;
+  }
 }
 
-.bubble:nth-child(1)  { width:14px; height:14px; left:8%;  bottom:-12%; animation-duration:10s; animation-delay:0s; }
-.bubble:nth-child(2)  { width:22px; height:22px; left:18%; bottom:-10%; animation-duration:12s; animation-delay:1.5s; }
-.bubble:nth-child(3)  { width:10px; height:10px; left:26%; bottom:-8%; animation-duration:8s; animation-delay:2.8s; }
-.bubble:nth-child(4)  { width:28px; height:28px; left:39%; bottom:-12%; animation-duration:14s; animation-delay:0.8s; }
-.bubble:nth-child(5)  { width:18px; height:18px; left:52%; bottom:-9%; animation-duration:9s; animation-delay:1.2s; }
-.bubble:nth-child(6)  { width:12px; height:12px; left:68%; bottom:-10%; animation-duration:11s; animation-delay:3s; }
-.bubble:nth-child(7)  { width:24px; height:24px; left:75%; bottom:-11%; animation-duration:13s; animation-delay:0.6s; }
-.bubble:nth-child(8)  { width:16px; height:16px; left:85%; bottom:-12%; animation-duration:10s; animation-delay:2.2s; }
-.bubble:nth-child(9)  { width:8px;  height:8px;  left:92%; bottom:-8%; animation-duration:7s; animation-delay:1.1s; }
-.bubble:nth-child(10) { width:34px; height:34px; left:45%; bottom:-13%; animation-duration:16s; animation-delay:4s; }
+.bubble:nth-child(1) {
+  width: 14px;
+  height: 14px;
+  left: 8%;
+  bottom: -12%;
+  animation-duration: 10s;
+  animation-delay: 0s;
+}
+
+.bubble:nth-child(2) {
+  width: 22px;
+  height: 22px;
+  left: 18%;
+  bottom: -10%;
+  animation-duration: 12s;
+  animation-delay: 1.5s;
+}
+
+.bubble:nth-child(3) {
+  width: 10px;
+  height: 10px;
+  left: 26%;
+  bottom: -8%;
+  animation-duration: 8s;
+  animation-delay: 2.8s;
+}
+
+.bubble:nth-child(4) {
+  width: 28px;
+  height: 28px;
+  left: 39%;
+  bottom: -12%;
+  animation-duration: 14s;
+  animation-delay: 0.8s;
+}
+
+.bubble:nth-child(5) {
+  width: 18px;
+  height: 18px;
+  left: 52%;
+  bottom: -9%;
+  animation-duration: 9s;
+  animation-delay: 1.2s;
+}
+
+.bubble:nth-child(6) {
+  width: 12px;
+  height: 12px;
+  left: 68%;
+  bottom: -10%;
+  animation-duration: 11s;
+  animation-delay: 3s;
+}
+
+.bubble:nth-child(7) {
+  width: 24px;
+  height: 24px;
+  left: 75%;
+  bottom: -11%;
+  animation-duration: 13s;
+  animation-delay: 0.6s;
+}
+
+.bubble:nth-child(8) {
+  width: 16px;
+  height: 16px;
+  left: 85%;
+  bottom: -12%;
+  animation-duration: 10s;
+  animation-delay: 2.2s;
+}
+
+.bubble:nth-child(9) {
+  width: 8px;
+  height: 8px;
+  left: 92%;
+  bottom: -8%;
+  animation-duration: 7s;
+  animation-delay: 1.1s;
+}
+
+.bubble:nth-child(10) {
+  width: 34px;
+  height: 34px;
+  left: 45%;
+  bottom: -13%;
+  animation-duration: 16s;
+  animation-delay: 4s;
+}
 
 .grid-overlay {
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   background-size: 42px 42px;
   opacity: 0.2;
 }
@@ -232,7 +326,7 @@ const certificates = [
 }
 
 .section-head p {
-  color: rgba(238,242,255,0.75);
+  color: rgba(238, 242, 255, 0.75);
   line-height: 1.85;
   max-width: 620px;
 }
@@ -245,8 +339,8 @@ const certificates = [
 }
 
 .service-card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 28px;
   padding: 28px;
   backdrop-filter: blur(18px);
@@ -270,10 +364,21 @@ const certificates = [
   background: rgba(0, 212, 255, 0.18);
 }
 
-.icon-design { background: linear-gradient(135deg, rgba(248, 113, 113, 0.16), rgba(251, 191, 36, 0.16)); }
-.icon-code { background: linear-gradient(135deg, rgba(79, 70, 229, 0.18), rgba(99, 102, 241, 0.14)); }
-.icon-api { background: linear-gradient(135deg, rgba(34, 197, 94, 0.18), rgba(16, 185, 129, 0.14)); }
-.icon-speed { background: linear-gradient(135deg, rgba(14, 165, 233, 0.18), rgba(59, 130, 246, 0.14)); }
+.icon-design {
+  background: linear-gradient(135deg, rgba(248, 113, 113, 0.16), rgba(251, 191, 36, 0.16));
+}
+
+.icon-code {
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.18), rgba(99, 102, 241, 0.14));
+}
+
+.icon-api {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.18), rgba(16, 185, 129, 0.14));
+}
+
+.icon-speed {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.18), rgba(59, 130, 246, 0.14));
+}
 
 .service-card h3 {
   margin: 0 0 0.75rem;
@@ -282,7 +387,7 @@ const certificates = [
 
 .service-card p {
   margin: 0;
-  color: rgba(238,242,255,0.78);
+  color: rgba(238, 242, 255, 0.78);
   line-height: 1.8;
 }
 
@@ -293,8 +398,8 @@ const certificates = [
 }
 
 .feature-card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 26px;
   padding: 26px;
   backdrop-filter: blur(16px);
@@ -304,7 +409,7 @@ const certificates = [
   display: inline-flex;
   padding: 0.5rem 0.85rem;
   border-radius: 999px;
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
   color: #a5f3fc;
   font-size: 0.75rem;
   letter-spacing: 0.14em;
@@ -317,7 +422,7 @@ const certificates = [
 
 .feature-card p {
   margin: 0;
-  color: rgba(238,242,255,0.75);
+  color: rgba(238, 242, 255, 0.75);
   line-height: 1.8;
 }
 
@@ -354,8 +459,8 @@ const certificates = [
   min-width: 320px;
   display: flex;
   flex-direction: column;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 2px;
   overflow: hidden;
   backdrop-filter: blur(16px);
@@ -385,7 +490,7 @@ const certificates = [
 
 .certificate-meta p {
   margin: 0;
-  color: rgba(238,242,255,0.78);
+  color: rgba(238, 242, 255, 0.78);
   font-size: 0.95rem;
   line-height: 1.65;
 }
@@ -394,6 +499,7 @@ const certificates = [
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -403,27 +509,41 @@ const certificates = [
   .certificate-track {
     gap: 18px;
   }
+
+  .certificate-card {
+    flex: 0 0 290px;
+    min-width: 290px;
+  }
 }
 
 @media (max-width: 900px) {
+
   .service-grid,
   .feature-row {
     grid-template-columns: 1fr;
   }
 
   .certificate-card {
-    flex: 0 0 100%;
-    min-width: 100%;
+    flex: 0 0 260px;
+    min-width: 260px;
   }
 
-  .certificate-carousel {
-    margin: 0;
+  .certificate-meta {
+    padding: 16px;
   }
-}
 
-@media (max-width: 640px) {
-  .certificate-card {
-    min-width: 100%;
+  .certificate-meta h4 {
+    font-size: 0.95rem;
+  }
+
+  .certificate-meta p {
+    font-size: 0.85rem;
+    line-height: 1.55;
+  }
+
+  .certificate-track {
+    gap: 16px;
+    animation-duration: 35s;
   }
 }
 
@@ -434,6 +554,35 @@ const certificates = [
 
   .section-head h2 {
     font-size: 2.2rem;
+  }
+
+  .certificate-card {
+    flex: 0 0 calc(100vw - 3rem);
+    min-width: calc(100vw - 3rem);
+    border-radius: 2px;
+  }
+
+  .certificate-carousel {
+    margin: 0 -1.5rem;
+  }
+
+  .certificate-track {
+    gap: 14px;
+    padding-left: 1.5rem;
+    animation-duration: 50s;
+  }
+
+  .certificate-meta {
+    padding: 14px;
+  }
+
+  .certificate-meta h4 {
+    font-size: 0.9rem;
+  }
+
+  .certificate-meta p {
+    font-size: 0.82rem;
+    line-height: 1.5;
   }
 }
 </style>
