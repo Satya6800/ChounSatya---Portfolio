@@ -69,116 +69,20 @@
 
         <div class="certificate-carousel">
           <div class="certificate-track">
-            <article class="certificate-card">
-              <img class="cert-thumb" src="@/assets/image/worksync.png" alt="Certificate Thumbnail" />
+            <!-- First set of cards -->
+            <article class="certificate-card" v-for="(cert, i) in certificates" :key="'a-' + i">
+              <img class="cert-thumb" :src="cert.img" :alt="cert.title" />
               <div class="certificate-meta">
-                <h4>UI Design Certification</h4>
-                <p>Mastering modern interface principles and user-centered design processes.</p>
+                <h4>{{ cert.title }}</h4>
+                <p>{{ cert.desc }}</p>
               </div>
             </article>
-            <article class="certificate-card">
-              <img class="cert-thumb" src="@/assets/image/worksync.png" alt="Certificate Thumbnail" />
+            <!-- Duplicate set for seamless loop -->
+            <article class="certificate-card" v-for="(cert, i) in certificates" :key="'b-' + i">
+              <img class="cert-thumb" :src="cert.img" :alt="cert.title" />
               <div class="certificate-meta">
-                <h4>Vue.js Professional</h4>
-                <p>Advanced skills in building reactive applications with Vue 3 and Vuex.</p>
-              </div>
-            </article>
-            <article class="certificate-card">
-              <img class="cert-thumb" src="@/assets/image/worksync.png" alt="Certificate Thumbnail" />
-              <div class="certificate-meta">
-                <h4>JavaScript Mastery</h4>
-                <p>Deep understanding of ES6+, async programming, and modular architecture.</p>
-              </div>
-            </article>
-            <article class="certificate-card">
-              <img class="cert-thumb" src="@/assets/image/worksync.png" alt="Certificate Thumbnail" />
-              <div class="certificate-meta">
-                <h4>API Development</h4>
-                <p>Designing and documenting RESTful services for scalable backend systems.</p>
-              </div>
-            </article>
-            <article class="certificate-card">
-              <img class="cert-thumb" src="@/assets/image/worksync.png" alt="Certificate Thumbnail" />
-              <div class="certificate-meta">
-                <h4>Node.js Backend</h4>
-                <p>Building secure server-side applications and real-time services with Node.</p>
-              </div>
-            </article>
-            <article class="certificate-card">
-              <img class="cert-thumb" src="@/assets/image/worksync.png" alt="Certificate Thumbnail" />
-              <div class="certificate-meta">
-                <h4>Database Design</h4>
-                <p>Creating efficient schemas, migrations, and query optimization strategies.</p>
-              </div>
-            </article>
-            <article class="certificate-card">
-              <img class="cert-thumb" src="@/assets/image/worksync.png" alt="Certificate Thumbnail" />
-              <div class="certificate-meta">
-                <h4>Git Workflow</h4>
-                <p>Professional source control, branching, and collaborative development practices.</p>
-              </div>
-            </article>
-            <article class="certificate-card">
-              <img class="cert-thumb" src="@/assets/image/worksync.png" alt="Certificate Thumbnail" />
-              <div class="certificate-meta">
-                <h4>Cloud Deployment</h4>
-                <p>Deploying apps on cloud platforms with CI/CD and automated release pipelines.</p>
-              </div>
-            </article>
-            <article class="certificate-card">
-              <img class="cert-thumb" src="@/assets/image/worksync.png" alt="Certificate Thumbnail" />
-              <div class="certificate-meta">
-                <h4>React.js Certified</h4>
-                <p>Component-driven UI development with hooks, routers, and state management.</p>
-              </div>
-            </article>
-            <article class="certificate-card">
-              <img class="cert-thumb" src="@/assets/image/worksync.png" alt="Certificate Thumbnail" />
-              <div class="certificate-meta">
-                <h4>HTML5 Expert</h4>
-                <p>Modern semantic markup and accessible structure for all screen sizes.</p>
-              </div>
-            </article>
-            <article class="certificate-card">
-              <img class="cert-thumb" src="@/assets/image/worksync.png" alt="Certificate Thumbnail" />
-              <div class="certificate-meta">
-                <h4>CSS & Layout</h4>
-                <p>Styling responsive interfaces with CSS Grid, Flexbox, and animation best practices.</p>
-              </div>
-            </article>
-            <article class="certificate-card">
-              <img class="cert-thumb" src="@/assets/image/worksync.png" alt="Certificate Thumbnail" />
-              <div class="certificate-meta">
-                <h4>TypeScript</h4>
-                <p>Strong typing and maintainable code in front-end and backend applications.</p>
-              </div>
-            </article>
-            <article class="certificate-card">
-              <img class="cert-thumb" src="@/assets/image/worksync.png" alt="Certificate Thumbnail" />
-              <div class="certificate-meta">
-                <h4>Tailwind CSS</h4>
-                <p>Utility-first styling for fast prototyping and consistent UI design.</p>
-              </div>
-            </article>
-            <article class="certificate-card">
-              <img class="cert-thumb" src="@/assets/image/worksync.png" alt="Certificate Thumbnail" />
-              <div class="certificate-meta">
-                <h4>Figma Workflow</h4>
-                <p>Design handoff, prototyping, and collaborative interface creation.</p>
-              </div>
-            </article>
-            <article class="certificate-card">
-              <img class="cert-thumb" src="@/assets/image/worksync.png" alt="Certificate Thumbnail" />
-              <div class="certificate-meta">
-                <h4>System Design</h4>
-                <p>Architecting modular applications with scalability and reliability in mind.</p>
-              </div>
-            </article>
-            <article class="certificate-card">
-              <img class="cert-thumb" src="@/assets/image/worksync.png" alt="Certificate Thumbnail" />
-              <div class="certificate-meta">
-                <h4>Project Leadership</h4>
-                <p>Coordinating teams, timelines, and client communication for successful launches.</p>
+                <h4>{{ cert.title }}</h4>
+                <p>{{ cert.desc }}</p>
               </div>
             </article>
           </div>
@@ -188,7 +92,28 @@
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+import CCNA1 from '@/assets/image/CCNA1.png'
+import AWS1 from '@/assets/image/AWS1.png'
+import AWS2 from '@/assets/image/AWS2.png'
+import AWS3 from '@/assets/image/AWS3.png'
+import AWS4 from '@/assets/image/AWS4.png'
+import CCNA2 from '@/assets/image/CCNA2.png'
+import fortinet from '@/assets/image/fortinet.png'
+import fortinet1 from '@/assets/image/fortinet1.png'
+
+const certificates = [
+  { img: CCNA1, title: 'Cisco Network', desc: 'CCNA: Switching, Routing, and Wireless Essentials.' },
+  { img: CCNA2, title: 'Cisco Network', desc: 'CCNAv7: Introduction to Networks.' },
+  { img: AWS1, title: 'AWS Academy', desc: 'AWS Academy Graduate - AWS Academy Cloud Architecting.' },
+  { img: AWS2, title: 'AWS Academy', desc: 'AWS Academy Graduate - AWS Academy Cloud Foundations.' },
+  { img: AWS3, title: 'AWS Academy', desc: 'AWS Academy Graduate - AWS Academy Data Engineering.' },
+  { img: AWS4, title: 'AWS Academy', desc: 'AWS Academy Graduate - AWS Academy Machine Learning Foundations.' },
+  
+  { img: fortinet, title: 'Fortinet Training', desc: 'Fortinet Certified Associate in Cybersecurity.' },
+   { img: fortinet1, title: 'Fortinet Training', desc: 'Fortinet Certified Fundamentals in Cybersecurity.' },
+]
+</script>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700&display=swap');
@@ -416,7 +341,12 @@
   display: flex;
   gap: 22px;
   padding-left: 1.5rem;
-  animation: scrollCertificates 18s linear infinite;
+  animation: scrollCertificates 40s linear infinite;
+  width: max-content;
+}
+
+.certificate-track:hover {
+  animation-play-state: paused;
 }
 
 .certificate-card {
@@ -426,7 +356,7 @@
   flex-direction: column;
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 24px;
+  border-radius: 2px;
   overflow: hidden;
   backdrop-filter: blur(16px);
   transition: transform 0.3s ease, border-color 0.3s ease;
@@ -439,8 +369,8 @@
 
 .cert-thumb {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   display: block;
 }
 

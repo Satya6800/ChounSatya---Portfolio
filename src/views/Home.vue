@@ -40,7 +40,14 @@
               </svg>
               View Projects
             </router-link>
-            <a href="/cv.pdf" download class="btn btn-outline">Download CV</a>
+            <a href="/cv.pdf" download class="btn btn-outline">
+              <svg class="icon" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10 3a1 1 0 011 1v7.586l2.293-2.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 11.586V4a1 1 0 011-1z"/>
+                <path d="M4 15a1 1 0 011 1h10a1 1 0 110 2H5a1 1 0 01-1-1v-1a1 1 0 011-1z" fill="none"/>
+                <rect x="3" y="16" width="14" height="2" rx="1"/>
+              </svg>
+              Download CV
+            </a>
             <router-link to="/contact" class="btn btn-outline">Hire Me →</router-link>
           </div>
 
