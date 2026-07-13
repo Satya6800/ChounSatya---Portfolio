@@ -32,12 +32,13 @@
             <div class="accent-line"></div>
           </div>
           <p class="bio-text">
-            I started my journey in web development with a passion for creating beautiful, functional digital experiences. 
-            Over the years, I've worked with startups and established companies, developing full-stack solutions that 
+            I started my journey in web development with a passion for creating beautiful, functional digital
+            experiences.
+            Over the years, I've worked with startups and established companies, developing full-stack solutions that
             scale and perform brilliantly.
           </p>
           <p class="bio-text">
-            I believe great code is not just about functionality—it's about craftsmanship, clean architecture, and 
+            I believe great code is not just about functionality—it's about craftsmanship, clean architecture, and
             continuously learning new technologies to stay ahead in this ever-evolving field.
           </p>
           <div class="cta-link">
@@ -92,7 +93,9 @@
           <div class="skill-card">
             <div class="skill-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                </path>
               </svg>
             </div>
             <h4>UI/UX Design</h4>
@@ -113,9 +116,39 @@
         </div>
       </div>
 
-      <!-- Experience Timeline -->
+      <!-- Training Timeline -->
       <div class="experience-section">
-        <h3 class="section-title">Experience</h3>
+        <h3 class="section-title">Training</h3>
+        <div class="timeline">
+
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <div class="marker-dot"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="company-thumbnail logos-3">
+                <img src="../assets/image/ANT.png" alt="ANT Technology Training Center">
+                <img src="../assets/image/MPTC.png" alt="MPTC">
+                <img src="../assets/image/CBRD_Fund.png" alt="CBRD Fund">
+              </div>
+              <div class="timeline-header">
+                <h4>Web Development Training (100% Scholarship)</h4>
+                <span class="timeline-date">2025 - 2026</span>
+              </div>
+              <p class="company">ANT Technology Training Center</p>
+              <p class="description">
+                Sponsored by the Ministry of Posts and Telecommunications (MPTC) and the CBRD Fund
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education Timeline -->
+      <div class="experience-section">
+        <h3 class="section-title">Education</h3>
         <div class="timeline">
           <!-- Timeline Item 1 -->
           <div class="timeline-item">
@@ -124,58 +157,15 @@
             </div>
             <div class="timeline-content">
               <div class="company-thumbnail">
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=100&h=100&fit=crop" alt="Tech Innovations Ltd">
+                <img src="../assets/image/rupp.png" alt="Royal University of Phnom Penh (RUPP)">
               </div>
               <div class="timeline-header">
-                <h4>Senior Full Stack Developer</h4>
-                <span class="timeline-date">2023 - Present</span>
+                <h4>Bachelor of Computer Science</h4>
+                <span class="timeline-date">2025 - 2026</span>
               </div>
-              <p class="company">Tech Innovations Ltd.</p>
+              <p class="company">Royal University of Phnom Penh (RUPP)</p>
               <p class="description">
-                Leading development of enterprise web applications, mentoring junior developers, 
-                and architecting scalable solutions using Vue.js and Node.js.
-              </p>
-            </div>
-          </div>
-
-          <!-- Timeline Item 2 -->
-          <div class="timeline-item">
-            <div class="timeline-marker">
-              <div class="marker-dot"></div>
-            </div>
-            <div class="timeline-content">
-              <div class="company-thumbnail">
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=100&h=100&fit=crop" alt="Digital Solutions Co">
-              </div>
-              <div class="timeline-header">
-                <h4>Full Stack Developer</h4>
-                <span class="timeline-date">2022 - 2023</span>
-              </div>
-              <p class="company">Digital Solutions Co.</p>
-              <p class="description">
-                Developed and maintained full-stack applications for various clients, 
-                improved application performance by 40%, and implemented modern design systems.
-              </p>
-            </div>
-          </div>
-
-          <!-- Timeline Item 3 -->
-          <div class="timeline-item">
-            <div class="timeline-marker">
-              <div class="marker-dot"></div>
-            </div>
-            <div class="timeline-content">
-              <div class="company-thumbnail">
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=100&h=100&fit=crop" alt="StartUp Hub">
-              </div>
-              <div class="timeline-header">
-                <h4>Junior Developer</h4>
-                <span class="timeline-date">2021 - 2022</span>
-              </div>
-              <p class="company">StartUp Hub</p>
-              <p class="description">
-                Started my professional journey working with modern web technologies, 
-                learned best practices, and delivered multiple projects successfully.
+                Expected Graduation: 2026
               </p>
             </div>
           </div>
@@ -189,7 +179,7 @@
           <div class="stat-name">Years Experience</div>
         </div>
         <div class="stat-box">
-          <div class="stat-number">24<span>+</span></div>
+          <div class="stat-number">7<span>+</span></div>
           <div class="stat-name">Projects Completed</div>
         </div>
         <div class="stat-box">
@@ -233,37 +223,145 @@
 .bubble {
   position: absolute;
   border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, rgba(120,200,255,0.18), rgba(60,120,220,0.05));
-  border: 1px solid rgba(120,200,255,0.12);
+  background: radial-gradient(circle at 30% 30%, rgba(120, 200, 255, 0.18), rgba(60, 120, 220, 0.05));
+  border: 1px solid rgba(120, 200, 255, 0.12);
   animation: floatBubble linear infinite;
 }
 
 @keyframes floatBubble {
-  0%   { transform: translateY(0) scale(1); opacity: 0; }
-  10%  { opacity: 1; }
-  90%  { opacity: 0.6; }
-  100% { transform: translateY(-110vh) scale(1.1); opacity: 0; }
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: translateY(-110vh) scale(1.1);
+    opacity: 0;
+  }
 }
 
-.bubble:nth-child(1)  { width:14px;  height:14px;  left:6%;   bottom:-10%; animation-duration:9s;  animation-delay:0s; }
-.bubble:nth-child(2)  { width:22px;  height:22px;  left:14%;  bottom:-10%; animation-duration:12s; animation-delay:1.5s; }
-.bubble:nth-child(3)  { width:8px;   height:8px;   left:23%;  bottom:-10%; animation-duration:7s;  animation-delay:3s; }
-.bubble:nth-child(4)  { width:30px;  height:30px;  left:35%;  bottom:-10%; animation-duration:14s; animation-delay:0.5s; }
-.bubble:nth-child(5)  { width:16px;  height:16px;  left:50%;  bottom:-10%; animation-duration:10s; animation-delay:2s; }
-.bubble:nth-child(6)  { width:10px;  height:10px;  left:62%;  bottom:-10%; animation-duration:8s;  animation-delay:4s; }
-.bubble:nth-child(7)  { width:24px;  height:24px;  left:72%;  bottom:-10%; animation-duration:13s; animation-delay:1s; }
-.bubble:nth-child(8)  { width:18px;  height:18px;  left:83%;  bottom:-10%; animation-duration:11s; animation-delay:2.5s; }
-.bubble:nth-child(9)  { width:6px;   height:6px;   left:90%;  bottom:-10%; animation-duration:6s;  animation-delay:0.8s; }
-.bubble:nth-child(10) { width:36px;  height:36px;  left:44%;  bottom:-10%; animation-duration:16s; animation-delay:3.5s; }
-.bubble:nth-child(11) { width:12px;  height:12px;  left:18%;  bottom:-10%; animation-duration:9s;  animation-delay:5s; }
-.bubble:nth-child(12) { width:20px;  height:20px;  left:78%;  bottom:-10%; animation-duration:11s; animation-delay:1.8s; }
+.bubble:nth-child(1) {
+  width: 14px;
+  height: 14px;
+  left: 6%;
+  bottom: -10%;
+  animation-duration: 9s;
+  animation-delay: 0s;
+}
+
+.bubble:nth-child(2) {
+  width: 22px;
+  height: 22px;
+  left: 14%;
+  bottom: -10%;
+  animation-duration: 12s;
+  animation-delay: 1.5s;
+}
+
+.bubble:nth-child(3) {
+  width: 8px;
+  height: 8px;
+  left: 23%;
+  bottom: -10%;
+  animation-duration: 7s;
+  animation-delay: 3s;
+}
+
+.bubble:nth-child(4) {
+  width: 30px;
+  height: 30px;
+  left: 35%;
+  bottom: -10%;
+  animation-duration: 14s;
+  animation-delay: 0.5s;
+}
+
+.bubble:nth-child(5) {
+  width: 16px;
+  height: 16px;
+  left: 50%;
+  bottom: -10%;
+  animation-duration: 10s;
+  animation-delay: 2s;
+}
+
+.bubble:nth-child(6) {
+  width: 10px;
+  height: 10px;
+  left: 62%;
+  bottom: -10%;
+  animation-duration: 8s;
+  animation-delay: 4s;
+}
+
+.bubble:nth-child(7) {
+  width: 24px;
+  height: 24px;
+  left: 72%;
+  bottom: -10%;
+  animation-duration: 13s;
+  animation-delay: 1s;
+}
+
+.bubble:nth-child(8) {
+  width: 18px;
+  height: 18px;
+  left: 83%;
+  bottom: -10%;
+  animation-duration: 11s;
+  animation-delay: 2.5s;
+}
+
+.bubble:nth-child(9) {
+  width: 6px;
+  height: 6px;
+  left: 90%;
+  bottom: -10%;
+  animation-duration: 6s;
+  animation-delay: 0.8s;
+}
+
+.bubble:nth-child(10) {
+  width: 36px;
+  height: 36px;
+  left: 44%;
+  bottom: -10%;
+  animation-duration: 16s;
+  animation-delay: 3.5s;
+}
+
+.bubble:nth-child(11) {
+  width: 12px;
+  height: 12px;
+  left: 18%;
+  bottom: -10%;
+  animation-duration: 9s;
+  animation-delay: 5s;
+}
+
+.bubble:nth-child(12) {
+  width: 20px;
+  height: 20px;
+  left: 78%;
+  bottom: -10%;
+  animation-duration: 11s;
+  animation-delay: 1.8s;
+}
 
 .grid-overlay {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(80,160,255,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(80,160,255,0.04) 1px, transparent 1px);
+    linear-gradient(rgba(80, 160, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(80, 160, 255, 0.04) 1px, transparent 1px);
   background-size: 48px 48px;
   z-index: 0;
 }
@@ -275,8 +373,21 @@
   z-index: 0;
 }
 
-.orb-1 { width:400px; height:400px; top:-80px; right:-60px;  background: rgba(30,100,220,0.18); }
-.orb-2 { width:300px; height:300px; bottom:-50px; left:-80px; background: rgba(10,160,180,0.14); }
+.orb-1 {
+  width: 400px;
+  height: 400px;
+  top: -80px;
+  right: -60px;
+  background: rgba(30, 100, 220, 0.18);
+}
+
+.orb-2 {
+  width: 300px;
+  height: 300px;
+  bottom: -50px;
+  left: -80px;
+  background: rgba(10, 160, 180, 0.14);
+}
 
 /* ===== CONTAINER ===== */
 .container {
@@ -299,8 +410,8 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(40,120,255,0.12);
-  border: 1px solid rgba(80,160,255,0.25);
+  background: rgba(40, 120, 255, 0.12);
+  border: 1px solid rgba(80, 160, 255, 0.25);
   color: #00cffa;
   font-size: 12px;
   font-weight: 500;
@@ -314,14 +425,25 @@
 
 .badge::before {
   content: '';
-  width: 6px; height: 6px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: #4aa8ff;
   box-shadow: 0 0 6px #4aa8ff;
   animation: pulse 2s ease-in-out infinite;
 }
 
-@keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.3;} }
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+}
 
 .section-header h2 {
   font-size: clamp(36px, 4vw, 52px);
@@ -335,12 +457,16 @@
   animation: shimmer 4s linear infinite;
 }
 
-@keyframes shimmer { to { background-position: 200% center; } }
+@keyframes shimmer {
+  to {
+    background-position: 200% center;
+  }
+}
 
 .intro-text {
   font-size: 16px;
   line-height: 1.7;
-  color: rgba(180,210,255,0.7);
+  color: rgba(180, 210, 255, 0.7);
   max-width: 600px;
   margin: 0 auto;
 }
@@ -357,8 +483,8 @@
 
 /* ===== BIO CARD ===== */
 .bio-card {
-  background: rgba(20,40,100,0.25);
-  border: 1px solid rgba(80,160,255,0.2);
+  background: rgba(20, 40, 100, 0.25);
+  border: 1px solid rgba(80, 160, 255, 0.2);
   border-radius: 20px;
   padding: 40px;
   backdrop-filter: blur(8px);
@@ -366,8 +492,8 @@
 }
 
 .bio-card:hover {
-  border-color: rgba(80,160,255,0.4);
-  background: rgba(20,40,100,0.35);
+  border-color: rgba(80, 160, 255, 0.4);
+  background: rgba(20, 40, 100, 0.35);
   transform: translateY(-4px);
 }
 
@@ -395,7 +521,7 @@
 .bio-text {
   font-size: 15px;
   line-height: 1.8;
-  color: rgba(180,210,255,0.75);
+  color: rgba(180, 210, 255, 0.75);
   margin-bottom: 16px;
 }
 
@@ -439,8 +565,15 @@
 }
 
 @keyframes fadeInRight {
-  from { opacity: 0; transform: translateX(32px); }
-  to   { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(32px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .photo-container {
@@ -453,27 +586,39 @@
   position: absolute;
   inset: -40px;
   border-radius: 20px;
-  background: radial-gradient(ellipse at center, rgba(90,180,255,0.3), transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(90, 180, 255, 0.3), transparent 70%);
   filter: blur(20px);
   animation: glowPulse 3s ease-in-out infinite;
 }
 
 @keyframes glowPulse {
-  0%, 100% { opacity: 0.6; }
-  50% { opacity: 1; }
+
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
 }
 
 .photo-ring {
   position: absolute;
   inset: 0;
-  border: 2px solid rgba(90,180,255,0.3);
+  border: 2px solid rgba(90, 180, 255, 0.3);
   border-radius: 20px;
   animation: rotateRing 20s linear infinite;
 }
 
 @keyframes rotateRing {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .profile-photo {
@@ -482,7 +627,7 @@
   height: 100%;
   object-fit: cover;
   border-radius: 18px;
-  border: 1px solid rgba(90,180,255,0.4);
+  border: 1px solid rgba(90, 180, 255, 0.4);
 }
 
 /* ===== SKILLS SECTION ===== */
@@ -520,8 +665,8 @@
 }
 
 .skill-card {
-  background: rgba(20,40,100,0.2);
-  border: 1px solid rgba(80,160,255,0.2);
+  background: rgba(20, 40, 100, 0.2);
+  border: 1px solid rgba(80, 160, 255, 0.2);
   border-radius: 16px;
   padding: 32px 24px;
   text-align: center;
@@ -531,18 +676,18 @@
 }
 
 .skill-card:hover {
-  border-color: rgba(90,180,255,0.5);
-  background: rgba(30,80,160,0.3);
+  border-color: rgba(90, 180, 255, 0.5);
+  background: rgba(30, 80, 160, 0.3);
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(90,180,255,0.15);
+  box-shadow: 0 20px 40px rgba(90, 180, 255, 0.15);
 }
 
 .skill-icon {
   width: 60px;
   height: 60px;
   margin: 0 auto 16px;
-  background: linear-gradient(135deg, rgba(90,180,255,0.2), rgba(167,139,250,0.2));
-  border: 1px solid rgba(90,180,255,0.3);
+  background: linear-gradient(135deg, rgba(90, 180, 255, 0.2), rgba(167, 139, 250, 0.2));
+  border: 1px solid rgba(90, 180, 255, 0.3);
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -552,9 +697,9 @@
 }
 
 .skill-card:hover .skill-icon {
-  background: linear-gradient(135deg, rgba(90,180,255,0.4), rgba(167,139,250,0.4));
+  background: linear-gradient(135deg, rgba(90, 180, 255, 0.4), rgba(167, 139, 250, 0.4));
   color: #a78bfa;
-  box-shadow: 0 0 20px rgba(90,180,255,0.3);
+  box-shadow: 0 0 20px rgba(90, 180, 255, 0.3);
 }
 
 .skill-icon svg {
@@ -571,7 +716,7 @@
 
 .skill-card p {
   font-size: 13px;
-  color: rgba(180,210,255,0.65);
+  color: rgba(180, 210, 255, 0.65);
   line-height: 1.5;
   margin: 0;
 }
@@ -600,7 +745,7 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(180deg, rgba(90,180,255,0.5), transparent);
+  background: linear-gradient(180deg, rgba(90, 180, 255, 0.5), transparent);
 }
 
 .timeline-item {
@@ -611,9 +756,17 @@
   animation: fadeInUp 0.6s ease backwards;
 }
 
-.timeline-item:nth-child(1) { animation-delay: 0.5s; }
-.timeline-item:nth-child(2) { animation-delay: 0.6s; }
-.timeline-item:nth-child(3) { animation-delay: 0.7s; }
+.timeline-item:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+.timeline-item:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+.timeline-item:nth-child(3) {
+  animation-delay: 0.7s;
+}
 
 .timeline-marker {
   position: relative;
@@ -627,19 +780,19 @@
   height: 16px;
   border-radius: 50%;
   background: linear-gradient(135deg, #5ab4ff, #a78bfa);
-  box-shadow: 0 0 20px rgba(90,180,255,0.6);
+  box-shadow: 0 0 20px rgba(90, 180, 255, 0.6);
   transition: all 0.3s ease;
 }
 
 .timeline-item:hover .marker-dot {
   width: 20px;
   height: 20px;
-  box-shadow: 0 0 30px rgba(90,180,255,0.8);
+  box-shadow: 0 0 30px rgba(90, 180, 255, 0.8);
 }
 
 .timeline-content {
-  background: rgba(20,40,100,0.2);
-  border: 1px solid rgba(80,160,255,0.2);
+  background: rgba(20, 40, 100, 0.2);
+  border: 1px solid rgba(80, 160, 255, 0.2);
   border-radius: 12px;
   padding: 24px;
   backdrop-filter: blur(8px);
@@ -647,8 +800,8 @@
 }
 
 .timeline-item:hover .timeline-content {
-  border-color: rgba(90,180,255,0.4);
-  background: rgba(30,80,160,0.3);
+  border-color: rgba(90, 180, 255, 0.4);
+  background: rgba(30, 80, 160, 0.3);
   transform: translateX(8px);
 }
 
@@ -658,21 +811,37 @@
   border-radius: 12px;
   margin-bottom: 16px;
   overflow: hidden;
-  border: 2px solid rgba(90,180,255,0.3);
-  box-shadow: 0 8px 24px rgba(90,180,255,0.15);
+  border: 2px solid rgba(90, 180, 255, 0.3);
+  box-shadow: 0 8px 24px rgba(90, 180, 255, 0.15);
   transition: all 0.3s ease;
 }
 
 .timeline-item:hover .company-thumbnail {
-  border-color: rgba(90,180,255,0.6);
-  box-shadow: 0 12px 32px rgba(90,180,255,0.25);
+  border-color: rgba(90, 180, 255, 0.6);
+  box-shadow: 0 12px 32px rgba(90, 180, 255, 0.25);
   transform: scale(1.05);
 }
 
 .company-thumbnail img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background: white;
+  padding: 4px;
+}
+
+.company-thumbnail.logos-3 {
+  width: auto;
+  display: inline-flex;
+  gap: 8px;
+  background: white;
+  padding: 4px 12px;
+}
+
+.company-thumbnail.logos-3 img {
+  width: auto;
+  padding: 0;
+  max-width: 80px;
 }
 
 .timeline-header {
@@ -707,7 +876,7 @@
 .description {
   font-size: 14px;
   line-height: 1.6;
-  color: rgba(180,210,255,0.7);
+  color: rgba(180, 210, 255, 0.7);
   margin: 0;
 }
 
@@ -717,8 +886,8 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 24px;
   padding: 60px 40px;
-  background: rgba(20,40,100,0.15);
-  border: 1px solid rgba(80,160,255,0.2);
+  background: rgba(20, 40, 100, 0.15);
+  border: 1px solid rgba(80, 160, 255, 0.2);
   border-radius: 20px;
   backdrop-filter: blur(8px);
   animation: fadeInUp 0.9s ease 0.5s both;
@@ -750,7 +919,7 @@
 
 .stat-name {
   font-size: 14px;
-  color: rgba(180,210,255,0.75);
+  color: rgba(180, 210, 255, 0.75);
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -758,8 +927,15 @@
 
 /* ===== ANIMATIONS ===== */
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(32px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ===== RESPONSIVE ===== */
