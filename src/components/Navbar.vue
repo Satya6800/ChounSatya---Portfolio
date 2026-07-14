@@ -1,5 +1,5 @@
-﻿<template>
-    <nav class="glass-navbar fixed-top">
+<template>
+    <nav class="glass-navbar fixed-top" :class="{ 'scrolled': isScrolled }">
         <div class="navbar-container container-fluid">
             <!-- Logo -->
             <router-link class="navbar-logo" to="/">
@@ -54,6 +54,15 @@
     z-index: 1000;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 50px;
+}
+
+.glass-navbar.scrolled {
+    background: rgba(13, 27, 42, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(100, 160, 255, 0.4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    margin-top: 1rem;
 }
 
 .navbar-container {
@@ -285,6 +294,20 @@
 </style>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
+
 const isOpen = ref(false);
+const isScrolled = ref(false);
+
+const handleScroll = () => {
+    isScrolled.value = window.scrollY > 50;
+};
+
+onMounted(() => {
+    window.addEventListener('scroll', handleScroll);
+});
+
+onUnmounted(() => {
+    window.removeEventListener('scroll', handleScroll);
+});
 </script>
