@@ -23,7 +23,7 @@
 
           <div class="email-row">
             <span>satyachoun169@gmail.com</span>
-            <button type="button" class="btn-copy">Copy</button>
+            <button type="button" class="btn-copy" @click="copyEmail">{{ copyText }}</button>
           </div>
 
           <div class="social-row">
@@ -81,7 +81,23 @@
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref } from 'vue';
+
+const copyText = ref('Copy');
+
+const copyEmail = async () => {
+  try {
+    await navigator.clipboard.writeText('satyachoun169@gmail.com');
+    copyText.value = 'Copied!';
+    setTimeout(() => {
+      copyText.value = 'Copy';
+    }, 2000);
+  } catch (err) {
+    console.error('Failed to copy text: ', err);
+  }
+};
+</script>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700&display=swap');
