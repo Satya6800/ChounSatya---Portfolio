@@ -6,13 +6,6 @@
                 <span class="logo-text">CHOUN SATYA</span>
             </router-link>
 
-            <!-- Menu Toggle Button -->
-            <button class="menu-toggle" :class="{ active: isOpen }" @click="isOpen = !isOpen">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
-
             <!-- Navigation Menu -->
             <nav class="nav-menu" :class="{ active: isOpen }">
                 <ul class="nav-list">
@@ -36,6 +29,37 @@
                     </li>
                 </ul>
             </nav>
+
+            <!-- Right side: theme toggle + hamburger -->
+            <div class="navbar-actions">
+                <!-- Theme Toggle -->
+                <button class="theme-toggle" @click="toggleTheme" :title="isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'" aria-label="Toggle theme">
+                    <!-- Moon icon (shown in dark mode) -->
+                    <svg v-if="isDark" viewBox="0 0 24 24" fill="currentColor" class="theme-icon">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                    <!-- Sun icon (shown in light mode) -->
+                    <svg v-else viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="theme-icon">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                </button>
+
+                <!-- Menu Toggle Button -->
+                <button class="menu-toggle" :class="{ active: isOpen }" @click="isOpen = !isOpen">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+
         </div>
     </nav>
 </template>
@@ -46,22 +70,21 @@
     width: 85%;
     padding: 12px 20px;
     margin: 1.5rem auto 0;
-    background: rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(100, 160, 255, 0.25);
+    background: var(--navbar-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border-color);
     z-index: 1000;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 50px;
 }
 
 .glass-navbar.scrolled {
-    background: rgba(13, 27, 42, 0.75);
+    background: var(--navbar-scrolled-bg);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(100, 160, 255, 0.4);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--navbar-scrolled-border);
+    box-shadow: var(--shadow-md);
     margin-top: 1rem;
 }
 
@@ -82,26 +105,21 @@
     font-size: 1.8rem;
     font-weight: 700;
     letter-spacing: -1px;
-  
 }
 
 .logo-text {
-    background: linear-gradient(130deg, #00d4ff 50%, #7b68ee 100%);
+    background: var(--brand-gradient-logo);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     animation: gradientShift 3s ease infinite;
-     font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 22px;
 }
 
 @keyframes gradientShift {
-    0%, 100% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
 }
 
 /* ===== NAVIGATION MENU ===== */
@@ -124,7 +142,7 @@
 
 /* ===== NAVIGATION LINKS ===== */
 .nav-link {
-    color: rgba(255, 255, 255, 0.85);
+    color: var(--nav-link-color);
     text-decoration: none;
     font-weight: 500;
     font-size: 14px;
@@ -135,22 +153,51 @@
     transition: color 0.3s ease;
 }
 
-
 .nav-link:hover {
-    color: #00d4ff;
+    color: var(--nav-link-hover);
 }
 
 /* ===== ACTIVE LINK STYLE ===== */
 .nav-list .router-link-active {
-    color: #00d4ff;
-    background: rgba(0, 212, 255, 0.15);
+    color: var(--nav-active-color);
+    background: var(--nav-active-bg);
     padding: 0.5rem 1rem;
     border-radius: 25px;
     transition: all 0.3s ease;
+    box-shadow: var(--shadow-glow);
 }
 
-.nav-list .router-link-active::before {
-    width: 100%;
+/* ===== NAVBAR ACTIONS (toggle group) ===== */
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* ===== THEME TOGGLE ===== */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    background: var(--toggle-bg);
+    border-radius: 25px;
+    padding: 0.6rem;
+    width: 40px;
+    height: 40px;
+    color: var(--text-accent);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+    background: var(--toggle-hover-bg);
+    transform: scale(1.1) rotate(15deg);
+}
+
+.theme-icon {
+    width: 18px;
+    height: 18px;
 }
 
 /* ===== MENU TOGGLE BUTTON ===== */
@@ -159,39 +206,33 @@
     flex-direction: column;
     cursor: pointer;
     border: none;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--toggle-bg);
     border-radius: 25px;
     padding: 0.75rem;
     width: 45px;
     height: 45px;
     transition: all 0.3s ease;
     position: relative;
+    align-items: center;
+    justify-content: center;
 }
 
 .menu-toggle:hover {
-    background: rgba(255, 255, 255, 0.15);
+    background: var(--toggle-hover-bg);
     transform: scale(1.05);
 }
 
 .hamburger-line {
     width: 20px;
     height: 2px;
-    background: linear-gradient(90deg, #00d4ff, #7b68ee);
+    background: linear-gradient(90deg, var(--brand-cyan), var(--brand-purple));
     border-radius: 25px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hamburger-line:nth-child(1) {
-    transform-origin: center;
 }
 
 .hamburger-line:nth-child(2) {
     margin: 6px 0;
     opacity: 1;
-}
-
-.hamburger-line:nth-child(3) {
-    transform-origin: center;
 }
 
 /* ===== ACTIVE TOGGLE ANIMATION ===== */
@@ -208,8 +249,8 @@
 }
 
 .menu-toggle.active {
-    background: rgba(0, 212, 255, 0.15);
-    box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+    background: var(--toggle-active-bg);
+    box-shadow: var(--shadow-glow);
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
@@ -231,9 +272,9 @@
         top: 100%;
         left: 0;
         right: 0;
-        background: rgba(13, 27, 42, 0.95);
-        backdrop-filter: blur(12px);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        background: var(--navbar-mobile-bg);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--border-subtle);
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -252,7 +293,7 @@
 
     .nav-item {
         padding: 0.75rem 1.5rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        border-bottom: 1px solid var(--border-subtle);
     }
 
     .nav-item:last-child {
@@ -262,11 +303,6 @@
     .nav-link {
         display: block;
         font-size: 1rem;
-    }
-
-    .nav-link::before {
-        bottom: 0;
-        height: 2px;
     }
 
     .logo-text {
@@ -295,6 +331,9 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
+import { useTheme } from '../composables/useTheme';
+
+const { isDark, toggleTheme } = useTheme();
 
 const isOpen = ref(false);
 const isScrolled = ref(false);

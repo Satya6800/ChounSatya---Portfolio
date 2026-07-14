@@ -191,6 +191,8 @@ const filteredProjects = computed(() => {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700&display=swap');
+
 /* ===== BUBBLES ===== */
 .bubbles {
   position: absolute;
@@ -202,8 +204,8 @@ const filteredProjects = computed(() => {
 .bubble {
   position: absolute;
   border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, rgba(120,200,255,0.18), rgba(60,120,220,0.05));
-  border: 1px solid rgba(120,200,255,0.12);
+  background: var(--bg-bubble);
+  border: 1px solid var(--bubble-border);
   animation: floatBubble linear infinite;
 }
 
@@ -243,7 +245,7 @@ const filteredProjects = computed(() => {
   bottom: 0; left: 50%;
   transform: translateX(-50%);
   border-radius: 50%;
-  border: 1px solid rgba(80,160,255,0.2);
+  border: 1px solid var(--border-color);
   animation: rippleOut 6s ease-out infinite;
 }
 
@@ -261,8 +263,8 @@ const filteredProjects = computed(() => {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(80,160,255,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(80,160,255,0.04) 1px, transparent 1px);
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
   background-size: 48px 48px;
   z-index: 0;
 }
@@ -275,15 +277,16 @@ const filteredProjects = computed(() => {
   z-index: 0;
 }
 
-.orb-1 { width:400px; height:400px; top:-80px; right:-60px;  background: rgba(30,100,220,0.18); }
-.orb-2 { width:300px; height:300px; bottom:-50px; left:-80px; background: rgba(10,160,180,0.14); }
+.orb-1 { width:400px; height:400px; top:-80px; right:-60px;  background: var(--orb-1-color); }
+.orb-2 { width:300px; height:300px; bottom:-50px; left:-80px; background: var(--orb-2-color); }
 
 /* ===== MAIN SECTION ===== */
 .portfolio-section {
   position: relative;
   min-height: 100vh;
-  background: linear-gradient(160deg, #0a0f2e 0%, #0d1f4a 40%, #0a2a3e 100%);
+  background: var(--hero-bg);
   overflow: hidden;
+  font-family: 'Syne', sans-serif;
   display: flex;
   align-items: center;
   padding: 120px 20px 60px;
@@ -318,13 +321,13 @@ const filteredProjects = computed(() => {
   font-size: 54px;
   font-weight: 900;
   margin: 0 0 16px 0;
-  color: #fff;
+  color: var(--text-primary);
   letter-spacing: -2px;
   line-height: 1.2;
 }
 
 .highlight {
-  background: linear-gradient(135deg, #64a0ff, #a0d8ff, #7eb8ff);
+  background: var(--brand-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -345,7 +348,7 @@ const filteredProjects = computed(() => {
 
 .portfolio-subtitle {
   font-size: 18px;
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--text-secondary);
   margin: 0;
   font-weight: 400;
   letter-spacing: 0.5px;
@@ -374,10 +377,10 @@ const filteredProjects = computed(() => {
 
 .filter-tag {
   padding: 10px 22px;
-  background: linear-gradient(135deg, rgba(100, 160, 255, 0.08), rgba(100, 160, 255, 0.03));
-  border: 1.5px solid rgba(100, 160, 255, 0.2);
+  background: var(--filter-bg);
+  border: 1.5px solid var(--filter-border);
   border-radius: 30px;
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--filter-color);
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
@@ -408,15 +411,15 @@ const filteredProjects = computed(() => {
 }
 
 .filter-tag:hover {
-  background: linear-gradient(135deg, rgba(100, 160, 255, 0.18), rgba(100, 160, 255, 0.08));
-  border-color: rgba(100, 160, 255, 0.5);
-  color: #a0d8ff;
+  background: var(--filter-active-bg);
+  border-color: var(--filter-active-border);
+  color: var(--filter-active-color);
   transform: translateY(-4px);
 }
 
 .filter-tag.active {
-  background: linear-gradient(135deg, rgba(100, 160, 255, 0.4), rgba(100, 160, 255, 0.2));
-  border-color: rgba(100, 160, 255, 0.7);
+  background: var(--filter-active-bg);
+  border-color: var(--filter-active-border);
   color: #fff;
   box-shadow: 0 0 30px rgba(100, 160, 255, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
   transform: scale(1.05);
@@ -472,7 +475,7 @@ const filteredProjects = computed(() => {
 .empty-state {
   text-align: center;
   padding: 80px 20px;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--text-muted);
   animation: fadeInUp 0.6s ease-out;
 }
 
@@ -504,7 +507,7 @@ const filteredProjects = computed(() => {
 
 .empty-state h3 {
   font-size: 28px;
-  color: #fff;
+  color: var(--text-primary);
   margin: 0 0 12px 0;
   font-weight: 700;
 }
@@ -565,3 +568,5 @@ const filteredProjects = computed(() => {
   }
 }
 </style>
+
+

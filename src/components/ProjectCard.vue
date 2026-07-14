@@ -62,17 +62,17 @@ defineProps({
 <style scoped>
 .project-card {
   position: relative;
-  background: linear-gradient(135deg, rgba(10, 20, 60, 0.4), rgba(30, 60, 120, 0.2));
+  background: var(--bg-card);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(100, 160, 255, 0.25);
+  border: 1px solid var(--border-color);
   border-radius: 24px;
   overflow: hidden;
   transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
   height: 100%;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-md);
 }
 
 .card-glow {
@@ -81,7 +81,7 @@ defineProps({
   right: -50%;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle, rgba(100, 160, 255, 0.2), transparent);
+  background: radial-gradient(circle, var(--orb-1-color), transparent);
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.5s ease;
@@ -94,10 +94,10 @@ defineProps({
 }
 
 .project-card:hover {
-  border-color: rgba(100, 160, 255, 0.6);
+  border-color: var(--border-active);
   transform: translateY(-12px) rotateX(5deg);
-  box-shadow: 0 30px 60px rgba(100, 160, 255, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  background: linear-gradient(135deg, rgba(20, 40, 100, 0.5), rgba(40, 80, 140, 0.3));
+  box-shadow: var(--shadow-lg);
+  background: var(--bg-card-hover);
 }
 
 .project-card:hover .card-glow {
@@ -115,8 +115,8 @@ defineProps({
   width: 100%;
   height: 220px;
   overflow: hidden;
-  background: linear-gradient(135deg, rgba(100, 160, 255, 0.15), rgba(100, 160, 255, 0.08));
-  border-bottom: 2px solid rgba(100, 160, 255, 0.1);
+  background: var(--bg-card);
+  border-bottom: 2px solid var(--border-subtle);
 }
 
 .project-thumbnail::before {
@@ -189,13 +189,13 @@ defineProps({
 .tag {
   display: inline-block;
   padding: 6px 12px;
-  background: linear-gradient(135deg, rgba(100, 160, 255, 0.25), rgba(100, 160, 255, 0.1));
+  background: var(--skill-tag-bg);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(100, 160, 255, 0.4);
+  border: 1px solid var(--border-active);
   border-radius: 8px;
   font-size: 11px;
   font-weight: 600;
-  color: #e0f0ff;
+  color: var(--skill-tag-color);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
@@ -203,7 +203,7 @@ defineProps({
 
 .tag:hover {
   background: linear-gradient(135deg, rgba(100, 160, 255, 0.4), rgba(100, 160, 255, 0.2));
-  border-color: rgba(100, 160, 255, 0.6);
+  border-color: var(--border-active);
   transform: translateY(-2px);
 }
 
@@ -219,19 +219,15 @@ defineProps({
 .project-title {
   font-size: 19px;
   font-weight: 800;
-  color: #fff;
+  color: var(--text-primary);
   margin: 0 0 10px 0;
-  background: linear-gradient(135deg, #f0f8ff, #a0d8ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
   letter-spacing: -0.5px;
   line-height: 1.3;
 }
 
 .project-description {
   font-size: 13.5px;
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--text-secondary);
   margin: 0 0 14px 0;
   line-height: 1.6;
   flex: 1;
@@ -244,26 +240,26 @@ defineProps({
   gap: 14px;
   margin-bottom: 18px;
   padding: 12px;
-  background: rgba(100, 160, 255, 0.08);
-  border: 1px solid rgba(100, 160, 255, 0.15);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
   border-radius: 12px;
   flex-wrap: wrap;
 }
 
 .stat-item {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--text-secondary);
   display: flex;
   gap: 4px;
 }
 
 .stat-label {
-  color: rgba(100, 160, 255, 0.85);
+  color: var(--text-muted);
   font-weight: 600;
 }
 
 .stat-value {
-  background: linear-gradient(135deg, #64a0ff, #a0d8ff);
+  background: var(--brand-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -316,31 +312,33 @@ defineProps({
 }
 
 .btn-view {
-  background: linear-gradient(135deg, rgba(100, 160, 255, 0.35), rgba(100, 160, 255, 0.2));
-  border: 1.5px solid rgba(100, 160, 255, 0.5);
-  color: #fff;
-  box-shadow: 0 4px 15px rgba(100, 160, 255, 0.15);
+  background: var(--badge-bg);
+  border: 1.5px solid var(--badge-border);
+  color: var(--text-accent);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-view:hover {
-  background: linear-gradient(135deg, rgba(100, 160, 255, 0.5), rgba(100, 160, 255, 0.35));
-  border-color: rgba(100, 160, 255, 0.7);
+  background: var(--brand-gradient);
+  border-color: var(--border-active);
+  color: #fff;
   transform: translateX(6px) translateY(-2px);
-  box-shadow: 0 8px 25px rgba(100, 160, 255, 0.25);
+  box-shadow: var(--shadow-btn-hover);
 }
 
 .btn-github {
   flex: 0.4;
-  background: rgba(100, 160, 255, 0.12);
-  border: 1.5px solid rgba(100, 160, 255, 0.25);
-  color: #a0d8ff;
+  background: var(--social-bg);
+  border: 1.5px solid var(--social-border);
+  color: var(--social-color);
 }
 
 .btn-github:hover {
-  background: rgba(100, 160, 255, 0.25);
-  border-color: rgba(100, 160, 255, 0.5);
+  background: var(--social-hover-bg);
+  border-color: var(--social-hover-border);
+  color: var(--social-hover-color);
   transform: scale(1.08) rotate(5deg);
-  box-shadow: 0 6px 20px rgba(100, 160, 255, 0.2);
+  box-shadow: var(--shadow-md);
 }
 
 .icon {
@@ -366,3 +364,4 @@ defineProps({
   }
 }
 </style>
+

@@ -1,0 +1,255 @@
+/* ============================================================
+   THEME CSS VARIABLES — Portfolio
+   Applied via [data-theme] attribute on <html>
+   ============================================================ */
+
+/* ===== DARK MODE (default) ===== */
+[data-theme="dark"],
+:root {
+  /* Backgrounds */
+  --bg-primary: #071119;
+  --bg-secondary: #0a1f3a;
+  --bg-card: rgba(255, 255, 255, 0.05);
+  --bg-card-hover: rgba(255, 255, 255, 0.08);
+  --bg-glass: rgba(255, 255, 255, 0.04);
+  --bg-glass-hover: rgba(255, 255, 255, 0.08);
+  --bg-input: rgba(255, 255, 255, 0.04);
+  --bg-input-focus: rgba(255, 255, 255, 0.08);
+  --bg-bubble: rgba(120, 200, 255, 0.16);
+  --bg-pill: rgba(255, 255, 255, 0.08);
+  --bg-tag: rgba(37, 99, 235, 0.12);
+
+  /* Text */
+  --text-primary: #eef2ff;
+  --text-secondary: rgba(238, 242, 255, 0.78);
+  --text-muted: rgba(140, 180, 255, 0.55);
+  --text-accent: #00d4ff;
+  --text-label: #c7d2fe;
+  --text-info: #8ccfff;
+
+  /* Brand */
+  --brand-blue: #2d7fe8;
+  --brand-blue-end: #5b5af0;
+  --brand-cyan: #00d4ff;
+  --brand-purple: #7b68ee;
+  --brand-gradient: linear-gradient(135deg, #2d7fe8, #5b5af0);
+  --brand-gradient-logo: linear-gradient(130deg, #00d4ff 50%, #7b68ee 100%);
+
+  /* Borders */
+  --border-color: rgba(100, 160, 255, 0.25);
+  --border-subtle: rgba(255, 255, 255, 0.1);
+  --border-card: rgba(255, 255, 255, 0.1);
+  --border-active: rgba(100, 160, 255, 0.4);
+  --border-focus: rgba(0, 212, 255, 0.35);
+  --border-input: rgba(255, 255, 255, 0.12);
+
+  /* Shadows */
+  --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 20px rgba(0, 212, 255, 0.3);
+  --shadow-btn: 0 4px 20px rgba(60, 100, 240, 0.4);
+  --shadow-btn-hover: 0 6px 28px rgba(60, 100, 240, 0.6);
+
+  /* Decorative */
+  --grid-color: rgba(80, 160, 255, 0.04);
+  --orb-1-color: rgba(30, 100, 220, 0.18);
+  --orb-2-color: rgba(10, 160, 180, 0.14);
+  --orb-3-color: rgba(56, 189, 248, 0.16);
+  --orb-contact-1: rgba(0, 212, 255, 0.18);
+  --orb-contact-2: rgba(139, 92, 246, 0.15);
+  --bubble-border: rgba(120, 200, 255, 0.12);
+  --ripple-color: rgba(80, 160, 255, 0.2);
+
+  /* Navbar */
+  --navbar-bg: rgba(255, 255, 255, 0.04);
+  --navbar-scrolled-bg: rgba(13, 27, 42, 0.75);
+  --navbar-scrolled-border: rgba(100, 160, 255, 0.4);
+  --navbar-mobile-bg: rgba(13, 27, 42, 0.95);
+  --nav-link-color: rgba(255, 255, 255, 0.85);
+  --nav-link-hover: #00d4ff;
+  --nav-active-bg: rgba(0, 212, 255, 0.15);
+  --nav-active-color: #00d4ff;
+  --toggle-bg: rgba(255, 255, 255, 0.1);
+  --toggle-hover-bg: rgba(255, 255, 255, 0.15);
+  --toggle-active-bg: rgba(0, 212, 255, 0.15);
+  --hamburger-color: #00d4ff;
+
+  /* Badges / Eyebrows */
+  --badge-bg: rgba(40, 120, 255, 0.12);
+  --badge-border: rgba(80, 160, 255, 0.25);
+  --badge-color: #00cffa;
+  --eyebrow-bg: rgba(0, 212, 255, 0.15);
+  --eyebrow-color: #b9f2ff;
+
+  /* Hero */
+  --hero-bg: linear-gradient(160deg, #0a0f2e 0%, #0d1f4a 40%, #0a2a3e 100%);
+
+  /* Skill tags */
+  --skill-tag-bg: rgba(37, 99, 235, 0.12);
+  --skill-tag-border: rgba(100, 160, 255, 0.3);
+  --skill-tag-color: #7eb8ff;
+
+  /* Social */
+  --social-bg: rgba(255, 255, 255, 0.04);
+  --social-border: rgba(100, 160, 255, 0.18);
+  --social-color: #7eb8ff;
+  --social-hover-bg: rgba(60, 120, 255, 0.15);
+  --social-hover-border: rgba(100, 160, 255, 0.45);
+  --social-hover-color: #afd5ff;
+
+  /* Filter tags (Portfolio) */
+  --filter-bg: rgba(100, 160, 255, 0.08);
+  --filter-border: rgba(100, 160, 255, 0.2);
+  --filter-color: rgba(255, 255, 255, 0.75);
+  --filter-active-bg: linear-gradient(135deg, rgba(100, 160, 255, 0.25), rgba(100, 160, 255, 0.12));
+  --filter-active-color: #ffffff;
+  --filter-active-border: rgba(100, 160, 255, 0.5);
+
+  /* Contact */
+  --contact-bg: linear-gradient(160deg, #071119 0%, #0a1f3a 100%);
+  --contact-page-color: #eef2ff;
+  --info-label: #8ccfff;
+  --copy-btn-bg: rgba(255, 255, 255, 0.1);
+  --copy-btn-hover-bg: rgba(0, 212, 255, 0.18);
+  --pill-color: #dbeafe;
+
+  /* Accent line */
+  --accent-line: linear-gradient(90deg, #5ab4ff, #a78bfa);
+}
+
+/* ===== LIGHT MODE ===== */
+[data-theme="light"] {
+  /* Backgrounds */
+  --bg-primary: #F8FAFC;
+  --bg-secondary: #FFFFFF;
+  --bg-card: rgba(255, 255, 255, 0.75);
+  --bg-card-hover: rgba(255, 255, 255, 0.95);
+  --bg-glass: rgba(255, 255, 255, 0.65);
+  --bg-glass-hover: rgba(255, 255, 255, 0.9);
+  --bg-input: rgba(255, 255, 255, 0.8);
+  --bg-input-focus: rgba(255, 255, 255, 1);
+  --bg-bubble: rgba(37, 99, 235, 0.06);
+  --bg-pill: rgba(37, 99, 235, 0.08);
+  --bg-tag: rgba(37, 99, 235, 0.08);
+
+  /* Text */
+  --text-primary: #0F172A;
+  --text-secondary: #334155;
+  --text-muted: #64748B;
+  --text-accent: #2563EB;
+  --text-label: #334155;
+  --text-info: #2563EB;
+
+  /* Brand */
+  --brand-blue: #2563EB;
+  --brand-blue-end: #0EA5E9;
+  --brand-cyan: #0EA5E9;
+  --brand-purple: #7C3AED;
+  --brand-gradient: linear-gradient(135deg, #2563EB, #0EA5E9);
+  --brand-gradient-logo: linear-gradient(130deg, #2563EB 50%, #7C3AED 100%);
+
+  /* Borders */
+  --border-color: rgba(37, 99, 235, 0.2);
+  --border-subtle: rgba(15, 23, 42, 0.1);
+  --border-card: rgba(37, 99, 235, 0.15);
+  --border-active: rgba(37, 99, 235, 0.5);
+  --border-focus: rgba(37, 99, 235, 0.5);
+  --border-input: rgba(15, 23, 42, 0.15);
+
+  /* Shadows */
+  --shadow-sm: 0 4px 12px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 10px 30px rgba(15, 23, 42, 0.1);
+  --shadow-lg: 0 20px 60px rgba(15, 23, 42, 0.12);
+  --shadow-glow: 0 4px 20px rgba(37, 99, 235, 0.25);
+  --shadow-btn: 0 4px 20px rgba(37, 99, 235, 0.3);
+  --shadow-btn-hover: 0 8px 30px rgba(37, 99, 235, 0.45);
+
+  /* Decorative */
+  --grid-color: rgba(37, 99, 235, 0.06);
+  --orb-1-color: rgba(37, 99, 235, 0.1);
+  --orb-2-color: rgba(124, 58, 237, 0.08);
+  --orb-3-color: rgba(14, 165, 233, 0.1);
+  --orb-contact-1: rgba(37, 99, 235, 0.1);
+  --orb-contact-2: rgba(124, 58, 237, 0.08);
+  --bubble-border: rgba(37, 99, 235, 0.12);
+  --ripple-color: rgba(37, 99, 235, 0.15);
+
+  /* Navbar */
+  --navbar-bg: rgba(255, 255, 255, 0.85);
+  --navbar-scrolled-bg: rgba(255, 255, 255, 0.97);
+  --navbar-scrolled-border: rgba(37, 99, 235, 0.2);
+  --navbar-mobile-bg: rgba(255, 255, 255, 0.98);
+  --nav-link-color: #334155;
+  --nav-link-hover: #2563EB;
+  --nav-active-bg: linear-gradient(135deg, #2563EB, #0EA5E9);
+  --nav-active-color: #ffffff;
+  --toggle-bg: rgba(37, 99, 235, 0.08);
+  --toggle-hover-bg: rgba(37, 99, 235, 0.15);
+  --toggle-active-bg: rgba(37, 99, 235, 0.15);
+  --hamburger-color: #2563EB;
+
+  /* Badges / Eyebrows */
+  --badge-bg: rgba(37, 99, 235, 0.08);
+  --badge-border: rgba(37, 99, 235, 0.25);
+  --badge-color: #2563EB;
+  --eyebrow-bg: rgba(37, 99, 235, 0.1);
+  --eyebrow-color: #1D4ED8;
+
+  /* Hero */
+  --hero-bg: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 40%, #EFF6FF 100%);
+
+  /* Skill tags */
+  --skill-tag-bg: rgba(37, 99, 235, 0.08);
+  --skill-tag-border: rgba(37, 99, 235, 0.2);
+  --skill-tag-color: #2563EB;
+
+  /* Social */
+  --social-bg: rgba(255, 255, 255, 0.8);
+  --social-border: rgba(37, 99, 235, 0.2);
+  --social-color: #2563EB;
+  --social-hover-bg: linear-gradient(135deg, #2563EB, #0EA5E9);
+  --social-hover-border: rgba(37, 99, 235, 0.5);
+  --social-hover-color: #ffffff;
+
+  /* Filter tags (Portfolio) */
+  --filter-bg: rgba(37, 99, 235, 0.06);
+  --filter-border: rgba(37, 99, 235, 0.2);
+  --filter-color: #334155;
+  --filter-active-bg: linear-gradient(135deg, #2563EB, #0EA5E9);
+  --filter-active-color: #ffffff;
+  --filter-active-border: rgba(37, 99, 235, 0.5);
+
+  /* Contact */
+  --contact-bg: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 50%, #EFF6FF 100%);
+  --contact-page-color: #0F172A;
+  --info-label: #2563EB;
+  --copy-btn-bg: rgba(37, 99, 235, 0.08);
+  --copy-btn-hover-bg: rgba(37, 99, 235, 0.15);
+  --pill-color: #1D4ED8;
+
+  /* Accent line */
+  --accent-line: linear-gradient(90deg, #2563EB, #7C3AED);
+}
+
+/* ===== GLOBAL TRANSITIONS ===== */
+*,
+*::before,
+*::after {
+  transition-property: background-color, border-color, color, box-shadow, opacity;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+}
+
+/* Exclude animation-heavy elements from blanket transition */
+.bubble,
+.ripple,
+.orb,
+.img-ring,
+.img-ring-2,
+.img-glow,
+.pulse-ring,
+[class*="animate"],
+[style*="animation"] {
+  transition: none;
+}

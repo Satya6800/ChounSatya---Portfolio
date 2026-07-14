@@ -206,7 +206,7 @@
 .about {
   position: relative;
   min-height: 100vh;
-  background: linear-gradient(160deg, #0a0f2e 0%, #0d1f4a 40%, #0a2a3e 100%);
+  background: var(--hero-bg);
   overflow: hidden;
   font-family: 'Syne', sans-serif;
   padding: 140px 0 80px;
@@ -223,8 +223,8 @@
 .bubble {
   position: absolute;
   border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, rgba(120, 200, 255, 0.18), rgba(60, 120, 220, 0.05));
-  border: 1px solid rgba(120, 200, 255, 0.12);
+  background: var(--bg-bubble);
+  border: 1px solid var(--bubble-border);
   animation: floatBubble linear infinite;
 }
 
@@ -360,8 +360,8 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(80, 160, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(80, 160, 255, 0.04) 1px, transparent 1px);
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
   background-size: 48px 48px;
   z-index: 0;
 }
@@ -378,7 +378,7 @@
   height: 400px;
   top: -80px;
   right: -60px;
-  background: rgba(30, 100, 220, 0.18);
+  background: var(--orb-1-color);
 }
 
 .orb-2 {
@@ -386,7 +386,7 @@
   height: 300px;
   bottom: -50px;
   left: -80px;
-  background: rgba(10, 160, 180, 0.14);
+  background: var(--orb-2-color);
 }
 
 /* ===== CONTAINER ===== */
@@ -410,9 +410,9 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(40, 120, 255, 0.12);
-  border: 1px solid rgba(80, 160, 255, 0.25);
-  color: #00cffa;
+  background: var(--badge-bg);
+  border: 1px solid var(--badge-border);
+  color: var(--badge-color);
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.08em;
@@ -428,8 +428,8 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #4aa8ff;
-  box-shadow: 0 0 6px #4aa8ff;
+  background: var(--text-accent);
+  box-shadow: 0 0 6px var(--text-accent);
   animation: pulse 2s ease-in-out infinite;
 }
 
@@ -448,7 +448,7 @@
 .section-header h2 {
   font-size: clamp(36px, 4vw, 52px);
   font-weight: 700;
-  background: linear-gradient(120deg, #5ab4ff, #a78bfa, #5ab4ff);
+  background: var(--brand-gradient);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -466,7 +466,7 @@
 .intro-text {
   font-size: 16px;
   line-height: 1.7;
-  color: rgba(180, 210, 255, 0.7);
+  color: var(--text-secondary);
   max-width: 600px;
   margin: 0 auto;
 }
@@ -483,8 +483,8 @@
 
 /* ===== BIO CARD ===== */
 .bio-card {
-  background: rgba(20, 40, 100, 0.25);
-  border: 1px solid rgba(80, 160, 255, 0.2);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   border-radius: 20px;
   padding: 40px;
   backdrop-filter: blur(8px);
@@ -492,8 +492,9 @@
 }
 
 .bio-card:hover {
-  border-color: rgba(80, 160, 255, 0.4);
-  background: rgba(20, 40, 100, 0.35);
+  border-color: var(--border-active);
+  background: var(--bg-card-hover);
+  box-shadow: var(--shadow-md);
   transform: translateY(-4px);
 }
 
@@ -507,21 +508,21 @@
 .card-header h3 {
   font-size: 22px;
   font-weight: 700;
-  color: #e8f0ff;
+  color: var(--text-primary);
   margin: 0;
 }
 
 .accent-line {
   width: 60px;
   height: 3px;
-  background: linear-gradient(90deg, #5ab4ff, #a78bfa);
+  background: var(--accent-line);
   border-radius: 2px;
 }
 
 .bio-text {
   font-size: 15px;
   line-height: 1.8;
-  color: rgba(180, 210, 255, 0.75);
+  color: var(--text-secondary);
   margin-bottom: 16px;
 }
 
@@ -532,7 +533,7 @@
 .link-accent {
   font-size: 14px;
   font-weight: 600;
-  color: #5ab4ff;
+  color: var(--text-accent);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -548,7 +549,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #5ab4ff, #a78bfa);
+  background: var(--accent-line);
   transition: width 0.3s ease;
 }
 
@@ -586,7 +587,7 @@
   position: absolute;
   inset: -40px;
   border-radius: 20px;
-  background: radial-gradient(ellipse at center, rgba(90, 180, 255, 0.3), transparent 70%);
+  background: radial-gradient(ellipse at center, var(--orb-1-color), transparent 70%);
   filter: blur(20px);
   animation: glowPulse 3s ease-in-out infinite;
 }
@@ -606,7 +607,7 @@
 .photo-ring {
   position: absolute;
   inset: 0;
-  border: 2px solid rgba(90, 180, 255, 0.3);
+  border: 2px solid var(--border-color);
   border-radius: 20px;
   animation: rotateRing 20s linear infinite;
 }
@@ -627,7 +628,7 @@
   height: 100%;
   object-fit: cover;
   border-radius: 18px;
-  border: 1px solid rgba(90, 180, 255, 0.4);
+  border: 1px solid var(--border-active);
 }
 
 /* ===== SKILLS SECTION ===== */
@@ -639,7 +640,7 @@
 .section-title {
   font-size: 28px;
   font-weight: 700;
-  color: #e8f0ff;
+  color: var(--text-primary);
   margin-bottom: 40px;
   text-align: center;
   position: relative;
@@ -654,7 +655,7 @@
   transform: translateX(-50%);
   width: 80px;
   height: 3px;
-  background: linear-gradient(90deg, #5ab4ff, #a78bfa);
+  background: var(--accent-line);
   border-radius: 2px;
 }
 
@@ -665,8 +666,8 @@
 }
 
 .skill-card {
-  background: rgba(20, 40, 100, 0.2);
-  border: 1px solid rgba(80, 160, 255, 0.2);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   border-radius: 16px;
   padding: 32px 24px;
   text-align: center;
@@ -676,30 +677,30 @@
 }
 
 .skill-card:hover {
-  border-color: rgba(90, 180, 255, 0.5);
-  background: rgba(30, 80, 160, 0.3);
+  border-color: var(--border-active);
+  background: var(--bg-card-hover);
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(90, 180, 255, 0.15);
+  box-shadow: var(--shadow-md);
 }
 
 .skill-icon {
   width: 60px;
   height: 60px;
   margin: 0 auto 16px;
-  background: linear-gradient(135deg, rgba(90, 180, 255, 0.2), rgba(167, 139, 250, 0.2));
-  border: 1px solid rgba(90, 180, 255, 0.3);
+  background: var(--badge-bg);
+  border: 1px solid var(--border-color);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #5ab4ff;
+  color: var(--text-accent);
   transition: all 0.3s ease;
 }
 
 .skill-card:hover .skill-icon {
-  background: linear-gradient(135deg, rgba(90, 180, 255, 0.4), rgba(167, 139, 250, 0.4));
-  color: #a78bfa;
-  box-shadow: 0 0 20px rgba(90, 180, 255, 0.3);
+  background: var(--bg-card-hover);
+  color: var(--brand-purple);
+  box-shadow: var(--shadow-glow);
 }
 
 .skill-icon svg {
@@ -710,13 +711,13 @@
 .skill-card h4 {
   font-size: 16px;
   font-weight: 700;
-  color: #e8f0ff;
+  color: var(--text-primary);
   margin-bottom: 8px;
 }
 
 .skill-card p {
   font-size: 13px;
-  color: rgba(180, 210, 255, 0.65);
+  color: var(--text-muted);
   line-height: 1.5;
   margin: 0;
 }
@@ -745,7 +746,7 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(180deg, rgba(90, 180, 255, 0.5), transparent);
+  background: linear-gradient(180deg, var(--border-active), transparent);
 }
 
 .timeline-item {
@@ -779,20 +780,20 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #5ab4ff, #a78bfa);
-  box-shadow: 0 0 20px rgba(90, 180, 255, 0.6);
+  background: var(--brand-gradient);
+  box-shadow: var(--shadow-glow);
   transition: all 0.3s ease;
 }
 
 .timeline-item:hover .marker-dot {
   width: 20px;
   height: 20px;
-  box-shadow: 0 0 30px rgba(90, 180, 255, 0.8);
+  box-shadow: var(--shadow-glow);
 }
 
 .timeline-content {
-  background: rgba(20, 40, 100, 0.2);
-  border: 1px solid rgba(80, 160, 255, 0.2);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 24px;
   backdrop-filter: blur(8px);
@@ -800,8 +801,9 @@
 }
 
 .timeline-item:hover .timeline-content {
-  border-color: rgba(90, 180, 255, 0.4);
-  background: rgba(30, 80, 160, 0.3);
+  border-color: var(--border-active);
+  background: var(--bg-card-hover);
+  box-shadow: var(--shadow-md);
   transform: translateX(8px);
 }
 
@@ -811,14 +813,14 @@
   border-radius: 12px;
   margin-bottom: 16px;
   overflow: hidden;
-  border: 2px solid rgba(90, 180, 255, 0.3);
-  box-shadow: 0 8px 24px rgba(90, 180, 255, 0.15);
+  border: 2px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
   transition: all 0.3s ease;
 }
 
 .timeline-item:hover .company-thumbnail {
-  border-color: rgba(90, 180, 255, 0.6);
-  box-shadow: 0 12px 32px rgba(90, 180, 255, 0.25);
+  border-color: var(--border-active);
+  box-shadow: var(--shadow-md);
   transform: scale(1.05);
 }
 
@@ -855,20 +857,20 @@
 .timeline-content h4 {
   font-size: 16px;
   font-weight: 700;
-  color: #e8f0ff;
+  color: var(--text-primary);
   margin: 0;
 }
 
 .timeline-date {
   font-size: 12px;
-  color: #5ab4ff;
+  color: var(--text-accent);
   font-weight: 600;
   white-space: nowrap;
 }
 
 .company {
   font-size: 13px;
-  color: #a78bfa;
+  color: var(--brand-purple);
   font-weight: 600;
   margin: 0 0 8px 0;
 }
@@ -876,7 +878,7 @@
 .description {
   font-size: 14px;
   line-height: 1.6;
-  color: rgba(180, 210, 255, 0.7);
+  color: var(--text-muted);
   margin: 0;
 }
 
@@ -886,8 +888,8 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 24px;
   padding: 60px 40px;
-  background: rgba(20, 40, 100, 0.15);
-  border: 1px solid rgba(80, 160, 255, 0.2);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   border-radius: 20px;
   backdrop-filter: blur(8px);
   animation: fadeInUp 0.9s ease 0.5s both;
@@ -905,7 +907,7 @@
 .stat-number {
   font-size: clamp(32px, 5vw, 48px);
   font-weight: 700;
-  background: linear-gradient(120deg, #5ab4ff, #a78bfa);
+  background: var(--brand-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -919,7 +921,7 @@
 
 .stat-name {
   font-size: 14px;
-  color: rgba(180, 210, 255, 0.75);
+  color: var(--text-muted);
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -1008,3 +1010,5 @@
   }
 }
 </style>
+
+

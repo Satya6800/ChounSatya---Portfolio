@@ -19,26 +19,34 @@
 
       <div class="service-grid">
         <article class="service-card">
-          <div class="service-icon icon-design">✦</div>
+          <div class="service-icon icon-design">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          </div>
           <h3>UI / UX Design</h3>
           <p>Crafting intuitive digital experiences with clean layouts, strong typography, and a user-first approach.
           </p>
         </article>
 
         <article class="service-card">
-          <div class="service-icon icon-code">⧉</div>
+          <div class="service-icon icon-code">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
           <h3>Web Development</h3>
           <p>Building responsive, fast websites using Vue, JavaScript, and modern frontend architectures.</p>
         </article>
 
         <article class="service-card">
-          <div class="service-icon icon-api">⚡</div>
+          <div class="service-icon icon-api">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
           <h3>API & Backend</h3>
           <p>Designing secure RESTful APIs, database schemas, and server-side logic for reliable app performance.</p>
         </article>
 
         <article class="service-card">
-          <div class="service-icon icon-speed">✧</div>
+          <div class="service-icon icon-speed">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg>
+          </div>
           <h3>Performance Tuning</h3>
           <p>Optimizing load times, reducing bundle size, and improving the experience across desktop and mobile.</p>
         </article>
@@ -124,10 +132,8 @@ const certificates = [
   position: relative;
   min-height: 100vh;
   padding: 110px 0 80px;
-  background: radial-gradient(circle at top left, rgba(0, 212, 255, 0.12), transparent 28%),
-    radial-gradient(circle at bottom right, rgba(123, 104, 238, 0.14), transparent 30%),
-    linear-gradient(160deg, #071119 0%, #0b1d3a 100%);
-  color: #eef2ff;
+  background: var(--hero-bg);
+  color: var(--text-primary);
   overflow: hidden;
   font-family: 'Syne', sans-serif;
 }
@@ -149,7 +155,7 @@ const certificates = [
   position: absolute;
   border-radius: 50%;
   background: radial-gradient(circle at 30% 30%, rgba(120, 200, 255, 0.16), rgba(60, 120, 220, 0.05));
-  border: 1px solid rgba(120, 200, 255, 0.12);
+  border: 1px solid var(--bubble-border);
   animation: floatBubble linear infinite;
 }
 
@@ -266,10 +272,10 @@ const certificates = [
 .grid-overlay {
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-image: linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
   background-size: 42px 42px;
-  opacity: 0.2;
+  opacity: 1; /* Opacity should be 1 since the variable has alpha */
 }
 
 .orb {
@@ -284,7 +290,7 @@ const certificates = [
   height: 160px;
   top: 10%;
   right: 10%;
-  background: rgba(0, 212, 255, 0.18);
+  background: var(--copy-btn-bg);
 }
 
 .orb-2 {
@@ -312,8 +318,8 @@ const certificates = [
   display: inline-block;
   padding: 0.55rem 1rem;
   border-radius: 999px;
-  background: rgba(0, 212, 255, 0.15);
-  color: #b9f2ff;
+  background: var(--eyebrow-bg);
+  color: var(--eyebrow-color);
   letter-spacing: 0.15em;
   font-size: 0.75rem;
   text-transform: uppercase;
@@ -326,7 +332,7 @@ const certificates = [
 }
 
 .section-head p {
-  color: rgba(238, 242, 255, 0.75);
+  color: var(--text-secondary);
   line-height: 1.85;
   max-width: 620px;
 }
@@ -339,8 +345,8 @@ const certificates = [
 }
 
 .service-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
   border-radius: 28px;
   padding: 28px;
   backdrop-filter: blur(18px);
@@ -349,7 +355,9 @@ const certificates = [
 
 .service-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(0, 212, 255, 0.25);
+  border-color: var(--border-active);
+  background: var(--bg-card-hover);
+  box-shadow: var(--shadow-sm);
 }
 
 .service-icon {
@@ -359,9 +367,14 @@ const certificates = [
   place-items: center;
   border-radius: 18px;
   margin-bottom: 18px;
-  font-size: 1.5rem;
-  color: #fff;
-  background: rgba(0, 212, 255, 0.18);
+  color: var(--text-primary);
+  background: var(--copy-btn-bg);
+}
+
+.service-icon svg {
+  width: 26px;
+  height: 26px;
+  stroke: currentColor;
 }
 
 .icon-design {
@@ -387,7 +400,7 @@ const certificates = [
 
 .service-card p {
   margin: 0;
-  color: rgba(238, 242, 255, 0.78);
+  color: var(--text-secondary);
   line-height: 1.8;
 }
 
@@ -398,8 +411,8 @@ const certificates = [
 }
 
 .feature-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
   border-radius: 26px;
   padding: 26px;
   backdrop-filter: blur(16px);
@@ -409,8 +422,8 @@ const certificates = [
   display: inline-flex;
   padding: 0.5rem 0.85rem;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
-  color: #a5f3fc;
+  background: var(--bg-card-hover);
+  color: var(--text-accent);
   font-size: 0.75rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -422,7 +435,7 @@ const certificates = [
 
 .feature-card p {
   margin: 0;
-  color: rgba(238, 242, 255, 0.75);
+  color: var(--text-secondary);
   line-height: 1.8;
 }
 
@@ -459,8 +472,8 @@ const certificates = [
   min-width: 320px;
   display: flex;
   flex-direction: column;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
   border-radius: 2px;
   overflow: hidden;
   backdrop-filter: blur(16px);
@@ -469,7 +482,8 @@ const certificates = [
 
 .certificate-card:hover {
   transform: translateY(-5px);
-  border-color: rgba(0, 212, 255, 0.25);
+  border-color: var(--border-active);
+  background: var(--bg-card-hover);
 }
 
 .cert-thumb {
@@ -490,7 +504,7 @@ const certificates = [
 
 .certificate-meta p {
   margin: 0;
-  color: rgba(238, 242, 255, 0.78);
+  color: var(--text-secondary);
   font-size: 0.95rem;
   line-height: 1.65;
 }
@@ -586,3 +600,5 @@ const certificates = [
   }
 }
 </style>
+
+
