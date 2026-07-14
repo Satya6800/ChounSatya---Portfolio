@@ -121,7 +121,7 @@
 }
 .bubble {
   position: absolute;
-  border-radius: 50%;
+  border-radius: 25px;
   background: radial-gradient(circle at 30% 30%, rgba(120,200,255,0.18), rgba(60,120,220,0.05));
   border: 1px solid rgba(120,200,255,0.12);
   animation: floatBubble linear infinite;
@@ -160,7 +160,7 @@
   position: absolute;
   bottom: 0; left: 50%;
   transform: translateX(-50%);
-  border-radius: 50%;
+  border-radius: 25px;
   border: 1px solid rgba(80,160,255,0.2);
   animation: rippleOut 6s ease-out infinite;
 }
@@ -186,7 +186,7 @@
 /* ===== GLOW ORBS ===== */
 .orb {
   position: absolute;
-  border-radius: 50%;
+  border-radius: 25px;
   filter: blur(80px);
   z-index: 0;
 }
@@ -229,14 +229,14 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   padding: 6px 14px;
-  border-radius: 100px;
+  border-radius: 25px;
   margin-bottom: 24px;
   backdrop-filter: blur(8px);
 }
 .badge::before {
   content: '';
   width: 6px; height: 6px;
-  border-radius: 50%;
+  border-radius: 25px;
   background: #4aa8ff;
   box-shadow: 0 0 6px #4aa8ff;
   animation: pulse 2s ease-in-out infinite;
@@ -289,7 +289,7 @@ h1 {
   align-items: center;
   gap: 8px;
   padding: 13px 28px;
-  border-radius: 100px;
+  border-radius: 25px;
   font-family: 'Syne', sans-serif;
   font-size: 14px;
   font-weight: 600;
@@ -351,7 +351,7 @@ h1 {
 .social { display: flex; gap: 14px; }
 .social-link {
   width: 42px; height: 42px;
-  border-radius: 50%;
+  border-radius: 25px;
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(100,160,255,0.18);
   display: flex; align-items: center; justify-content: center;
@@ -415,7 +415,7 @@ h1 {
 .img-ring {
   position: absolute;
   inset: -18px;
-  border-radius: 50%;
+  border-radius: 25px;
   border: 1px solid rgba(80,160,255,0.15);
   animation: spinRing 20s linear infinite;
 }
@@ -425,7 +425,7 @@ h1 {
   top: -3px; left: 50%;
   width: 6px; height: 6px;
   background: #4aa8ff;
-  border-radius: 50%;
+  border-radius: 25px;
   box-shadow: 0 0 8px #4aa8ff;
   transform: translateX(-50%);
 }
@@ -434,7 +434,7 @@ h1 {
 .img-ring-2 {
   position: absolute;
   inset: -36px;
-  border-radius: 50%;
+  border-radius: 25px;
   border: 1px solid rgba(80,160,255,0.08);
   animation: spinRing 30s linear infinite reverse;
 }
@@ -443,7 +443,7 @@ h1 {
 .img-glow {
   position: absolute;
   inset: -20px;
-  border-radius: 50%;
+  border-radius: 25px;
   background: radial-gradient(circle, rgba(40,100,220,0.15), transparent 70%);
   animation: glowPulse 3s ease-in-out infinite;
 }
@@ -452,7 +452,7 @@ h1 {
 .hero-img {
   width: 100%; height: 100%;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 25px;
   border: 3px solid rgba(80,160,255,0.25);
   position: relative;
   z-index: 1;
@@ -465,7 +465,7 @@ h1 {
   background: rgba(10,20,50,0.75);
   border: 1px solid rgba(80,160,255,0.25);
   backdrop-filter: blur(12px);
-  border-radius: 12px;
+  border-radius: 25px;
   padding: 8px 14px;
   font-size: 12px;
   color: #7eb8ff;
@@ -478,7 +478,7 @@ h1 {
   content: '';
   display: inline-block;
   width: 6px; height: 6px;
-  border-radius: 50%;
+  border-radius: 25px;
   margin-right: 6px;
   background: currentColor;
 }

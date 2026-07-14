@@ -145,7 +145,7 @@
     color: #00d4ff;
     background: rgba(0, 212, 255, 0.15);
     padding: 0.5rem 1rem;
-    border-radius: 20px;
+    border-radius: 25px;
     transition: all 0.3s ease;
 }
 
@@ -160,7 +160,7 @@
     cursor: pointer;
     border: none;
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
+    border-radius: 25px;
     padding: 0.75rem;
     width: 45px;
     height: 45px;
@@ -177,7 +177,7 @@
     width: 20px;
     height: 2px;
     background: linear-gradient(90deg, #00d4ff, #7b68ee);
-    border-radius: 2px;
+    border-radius: 25px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
