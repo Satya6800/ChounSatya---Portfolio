@@ -1,14 +1,12 @@
 <template>
-  <div class="transition-overlay" :class="{ 'is-hidden': isLoaded }"></div>
-  <section class="hero">
-    <!-- Water Ripple Rings -->
-    <div class="ripple-wrap">
-      <div class="ripple"></div>
-      <div class="ripple"></div>
-      <div class="ripple"></div>
+  <div class="transition-overlay" :class="{ 'is-hidden': isLoaded }">
+    <div class="overlay-layer layer-1"></div>
+    <div class="overlay-layer layer-2"></div>
+    <div class="overlay-layer layer-3">
+      <h2 class="overlay-text">CHOUN SATYA</h2>
     </div>
-
-    <!-- Glow Orbs -->
+  </div>
+  <section class="hero">
     <div class="orb orb-1"></div>
 
     <div class="container">
@@ -96,7 +94,7 @@ onMounted(() => {
   // Trigger the slide-up animation shortly after mount
   setTimeout(() => {
     isLoaded.value = true;
-  }, 50);
+  }, 1200);
 });
 
 const scrollToSection = (id) => {
@@ -116,20 +114,79 @@ const scrollToSection = (id) => {
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: var(--overlay-bg);
-  box-shadow: var(--shadow-lg);
-  transform: translateY(0%);
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  transition: transform 0.85s cubic-bezier(0.7, 0, 0.3, 1), border-radius 0.85s cubic-bezier(0.7, 0, 0.3, 1);
   pointer-events: all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .transition-overlay.is-hidden {
-  transform: translateY(-100%);
   pointer-events: none;
+}
+
+.overlay-layer {
+  position: absolute;
+  inset: 0;
+  background: var(--overlay-bg);
+  transform: translateY(0%);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  transition: transform 1s cubic-bezier(0.7, 0, 0.3, 1), border-radius 1s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.layer-1 {
+  opacity: 0.35;
+  z-index: 1;
+}
+
+.layer-2 {
+  opacity: 0.7;
+  z-index: 2;
+}
+
+.layer-3 {
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.is-hidden .layer-1 {
+  transform: translateY(-100%);
   border-bottom-left-radius: 50% 100px;
   border-bottom-right-radius: 50% 100px;
+  transition-delay: 0.3s;
+}
+
+.is-hidden .layer-2 {
+  transform: translateY(-100%);
+  border-bottom-left-radius: 50% 100px;
+  border-bottom-right-radius: 50% 100px;
+  transition-delay: 0.15s;
+}
+
+.is-hidden .layer-3 {
+  transform: translateY(-100%);
+  border-bottom-left-radius: 50% 100px;
+  border-bottom-right-radius: 50% 100px;
+  transition-delay: 0s;
+}
+
+.overlay-text {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  z-index: 4;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.is-hidden .overlay-text {
+  opacity: 0;
+  transform: translateY(-20px);
 }
 
 
