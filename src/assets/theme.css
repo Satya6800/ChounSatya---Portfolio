@@ -62,7 +62,7 @@
   --ripple-color: rgba(80, 160, 255, 0.2);
 
   /* Navbar */
-  --navbar-bg: rgba(255, 255, 255, 0.04);
+  --navbar-bg: rgba(13, 27, 42, 0.75);
   --navbar-scrolled-bg: rgba(13, 27, 42, 0.75);
   --navbar-scrolled-border: rgba(100, 160, 255, 0.4);
   --navbar-mobile-bg: rgba(13, 27, 42, 0.95);
@@ -116,6 +116,9 @@
 
   /* Accent line */
   --accent-line: linear-gradient(90deg, #5ab4ff, #a78bfa);
+
+  /* Overlay */
+  --overlay-bg: var(--bg-secondary);
 }
 
 /* ===== LIGHT MODE ===== */
@@ -230,6 +233,9 @@
 
   /* Accent line */
   --accent-line: linear-gradient(90deg, #2563EB, #7C3AED);
+
+  /* Overlay */
+  --overlay-bg: var(--brand-blue);
 }
 
 /* ===== GLOBAL TRANSITIONS ===== */

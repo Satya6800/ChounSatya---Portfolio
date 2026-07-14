@@ -1,4 +1,5 @@
 <template>
+  <div class="transition-overlay" :class="{ 'is-hidden': isLoaded }"></div>
   <section class="hero">
     <!-- Animated Bubbles -->
     <div class="bubbles">
@@ -95,9 +96,41 @@
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref, onMounted } from 'vue';
+
+const isLoaded = ref(false);
+
+onMounted(() => {
+  // Trigger the slide-up animation shortly after mount
+  setTimeout(() => {
+    isLoaded.value = true;
+  }, 50);
+});
+</script>
 
 <style scoped>
+/* ===== TRANSITION OVERLAY ===== */
+.transition-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: var(--overlay-bg);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(0%);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  transition: transform 0.85s cubic-bezier(0.7, 0, 0.3, 1), border-radius 0.85s cubic-bezier(0.7, 0, 0.3, 1);
+  pointer-events: all;
+}
+
+.transition-overlay.is-hidden {
+  transform: translateY(-100%);
+  pointer-events: none;
+  border-bottom-left-radius: 50% 100px;
+  border-bottom-right-radius: 50% 100px;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700&display=swap');
 
 /* ===== BASE ===== */

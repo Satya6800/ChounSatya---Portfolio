@@ -1,11 +1,13 @@
 <script setup>
 import Navbar from './components/Navbar.vue';
+import ScrollToTop from './components/ScrollToTop.vue';
 import router from './router';
 </script>
 
 <template>
  <Navbar/>
  <router-view></router-view>
+ <ScrollToTop/>
 </template>
 
 <style>
