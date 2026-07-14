@@ -2,6 +2,7 @@
    THEME CSS VARIABLES — Portfolio
    Applied via [data-theme] attribute on <html>
    ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700&display=swap');
 
 /* ===== DARK MODE (default) ===== */
 [data-theme="dark"],
@@ -60,6 +61,9 @@
   --orb-contact-2: rgba(139, 92, 246, 0.15);
   --bubble-border: rgba(120, 200, 255, 0.12);
   --ripple-color: rgba(80, 160, 255, 0.2);
+  /* Tech Pattern */
+  --tech-grid-color: rgba(0, 212, 255, 0.05);
+  --tech-node-color: rgba(0, 212, 255, 0.15);
 
   /* Navbar */
   --navbar-bg: rgba(13, 27, 42, 0.75);
@@ -177,6 +181,9 @@
   --orb-contact-2: rgba(124, 58, 237, 0.08);
   --bubble-border: rgba(37, 99, 235, 0.12);
   --ripple-color: rgba(37, 99, 235, 0.15);
+  /* Tech Pattern */
+  --tech-grid-color: rgba(37, 99, 235, 0.05);
+  --tech-node-color: rgba(37, 99, 235, 0.15);
 
   /* Navbar */
   --navbar-bg: rgba(255, 255, 255, 0.85);
@@ -258,4 +265,19 @@
 [class*="animate"],
 [style*="animation"] {
   transition: none;
+}
+
+/* ===== CRITICAL OVERRIDES (beat Bootstrap) ===== */
+/* Bootstrap sets body { background-color: #fff } — we must override it */
+html, body, #app {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure section backgrounds are transparent so global bg shows */
+section {
+  background-color: transparent !important;
 }

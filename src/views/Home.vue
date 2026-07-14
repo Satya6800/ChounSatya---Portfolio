@@ -1,11 +1,6 @@
 <template>
   <div class="transition-overlay" :class="{ 'is-hidden': isLoaded }"></div>
   <section class="hero">
-    <!-- Animated Bubbles -->
-    <div class="bubbles">
-      <div class="bubble" v-for="n in 12" :key="n"></div>
-    </div>
-
     <!-- Water Ripple Rings -->
     <div class="ripple-wrap">
       <div class="ripple"></div>
@@ -13,34 +8,30 @@
       <div class="ripple"></div>
     </div>
 
-    <!-- Grid Pattern Overlay -->
-    <div class="grid-overlay"></div>
-
     <!-- Glow Orbs -->
     <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
 
     <div class="container">
       <div class="row">
 
         <!-- Left Content -->
         <div class="left">
-          <div class="badge">Available for Work</div>
+          <div class="badge" data-aos="fade-down" data-aos-delay="100">Available for Work</div>
 
-          <h1>Hi, I'm </h1>
-          <h1><span class="name">Choun Satya</span></h1>
-          <p class="subtitle">Full Stack Developer</p>
-          <p class="desc">
+          <h1 data-aos="fade-up" data-aos-delay="200">Hi, I'm </h1>
+          <h1 data-aos="fade-up" data-aos-delay="300"><span class="name">Choun Satya</span></h1>
+          <p class="subtitle" data-aos="fade-up" data-aos-delay="350">Full Stack Developer</p>
+          <p class="desc" data-aos="fade-up" data-aos-delay="400">
             I build modern, scalable web applications with clean UI and powerful backend systems.
           </p>
 
-          <div class="btns">
-            <router-link to="/portfolio" class="btn btn-primary">
+          <div class="btns" data-aos="fade-up" data-aos-delay="500">
+            <a href="#portfolio" class="btn btn-primary" @click.prevent="scrollToSection('portfolio')">
               <svg class="icon" viewBox="0 0 20 20">
                 <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-.293.707L13 10.414V17a1 1 0 01-1.447.894l-4-2A1 1 0 017 15v-4.586L3.293 6.707A1 1 0 013 6V4z"/>
               </svg>
               View Projects
-            </router-link>
+            </a>
             <a href="/Choun Satya CV.pdf" download class="btn btn-outline">
               <svg class="icon" viewBox="0 0 20 20" fill="currentColor">
                 <path d="M10 3a1 1 0 011 1v7.586l2.293-2.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 11.586V4a1 1 0 011-1z"/>
@@ -49,10 +40,10 @@
               </svg>
               Download CV
             </a>
-            <router-link to="/contact" class="btn btn-outline">Hire Me →</router-link>
+            <a href="#contact" class="btn btn-outline" @click.prevent="scrollToSection('contact')">Hire Me →</a>
           </div>
 
-          <div class="social">
+          <div class="social" data-aos="fade-up" data-aos-delay="600">
             <a href="https://github.com/Satya6800" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
               <svg viewBox="0 0 1024 1024" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path d="M512 76C281.6 76 96 261.6 96 492c0 176.4 114.4 325.8 273.2 378.8 20 3.6 27.4-8.6 27.4-19.2 0-9.4-.4-40.8-.6-74-111.2 24.2-134.6-53.6-134.6-53.6-18.2-46.2-44.4-58.6-44.4-58.6-36.4-24.8 2.8-24.2 2.8-24.2 40.2 2.8 61.4 41.2 61.4 41.2 35.8 61.2 93.8 43.6 116.6 33.4 3.6-25.8 14-43.6 25.4-53.6-88.8-10.1-182-44.4-182-197.4 0-43.6 15.6-79.2 41.2-107.2-4.2-10.1-17.8-50.8 3.8-105.8 0 0 33.6-10.8 110 40.8 31.8-8.8 65.8-13.2 99.6-13.4 33.8.2 67.8 4.6 99.6 13.4 76.4-51.6 110-40.8 110-40.8 21.6 55 8 95.6 3.8 105.8 25.6 28 41.2 63.6 41.2 107.2 0 153.6-93.4 187.2-182 197.2 14.4 12.4 27.4 36.8 27.4 74.2 0 53.6-.4 96.8-.4 110 0 10.6 7.2 23 27.6 19.2C813.6 817.8 928 668.4 928 492 928 261.6 742.4 76 512 76Z"/>
@@ -79,7 +70,7 @@
         </div>
 
         <!-- Right Image -->
-        <div class="right">
+        <div class="right" data-aos="fade-left" data-aos-delay="300">
           <div class="img-wrap">
             <div class="img-ring-2"></div>
             <div class="img-ring"></div>
@@ -107,6 +98,16 @@ onMounted(() => {
     isLoaded.value = true;
   }, 50);
 });
+
+const scrollToSection = (id) => {
+  const element = document.getElementById(id);
+  if (element) {
+    window.scrollTo({
+      top: element.offsetTop - 80, // Adjust for navbar height
+      behavior: 'smooth'
+    });
+  }
+};
 </script>
 
 <style scoped>
@@ -131,54 +132,18 @@ onMounted(() => {
   border-bottom-right-radius: 50% 100px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700&display=swap');
+
 
 /* ===== BASE ===== */
 .hero {
   position: relative;
   min-height: 120vh;
-  background: var(--hero-bg);
   overflow: hidden;
   display: flex;
   align-items: center;
   font-family: 'Syne', sans-serif;
   padding: 80px 0 40px;
 }
-
-/* ===== BUBBLES ===== */
-.bubbles {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-}
-.bubble {
-  position: absolute;
-  border-radius: 25px;
-  background: var(--bg-bubble);
-  border: 1px solid var(--bubble-border);
-  animation: floatBubble linear infinite;
-}
-@keyframes floatBubble {
-  0%   { transform: translateY(0) scale(1); opacity: 0; }
-  10%  { opacity: 1; }
-  90%  { opacity: 0.6; }
-  100% { transform: translateY(-110vh) scale(1.1); opacity: 0; }
-}
-
-/* Stagger each bubble */
-.bubble:nth-child(1)  { width:14px;  height:14px;  left:6%;   bottom:-10%; animation-duration:9s;  animation-delay:0s; }
-.bubble:nth-child(2)  { width:22px;  height:22px;  left:14%;  bottom:-10%; animation-duration:12s; animation-delay:1.5s; }
-.bubble:nth-child(3)  { width:8px;   height:8px;   left:23%;  bottom:-10%; animation-duration:7s;  animation-delay:3s; }
-.bubble:nth-child(4)  { width:30px;  height:30px;  left:35%;  bottom:-10%; animation-duration:14s; animation-delay:0.5s; }
-.bubble:nth-child(5)  { width:16px;  height:16px;  left:50%;  bottom:-10%; animation-duration:10s; animation-delay:2s; }
-.bubble:nth-child(6)  { width:10px;  height:10px;  left:62%;  bottom:-10%; animation-duration:8s;  animation-delay:4s; }
-.bubble:nth-child(7)  { width:24px;  height:24px;  left:72%;  bottom:-10%; animation-duration:13s; animation-delay:1s; }
-.bubble:nth-child(8)  { width:18px;  height:18px;  left:83%;  bottom:-10%; animation-duration:11s; animation-delay:2.5s; }
-.bubble:nth-child(9)  { width:6px;   height:6px;   left:90%;  bottom:-10%; animation-duration:6s;  animation-delay:0.8s; }
-.bubble:nth-child(10) { width:36px;  height:36px;  left:44%;  bottom:-10%; animation-duration:16s; animation-delay:3.5s; }
-.bubble:nth-child(11) { width:12px;  height:12px;  left:18%;  bottom:-10%; animation-duration:9s;  animation-delay:5s; }
-.bubble:nth-child(12) { width:20px;  height:20px;  left:78%;  bottom:-10%; animation-duration:11s; animation-delay:1.8s; }
 
 /* ===== WATER RIPPLES ===== */
 .ripple-wrap {
@@ -203,17 +168,6 @@ onMounted(() => {
 @keyframes rippleOut {
   0%   { opacity: 0.6; transform: translateX(-50%) scaleY(1); }
   100% { opacity: 0;   transform: translateX(-50%) scaleY(1.3); border-width: 0; }
-}
-
-/* ===== GRID PATTERN ===== */
-.grid-overlay {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(var(--grid-color) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
-  background-size: 48px 48px;
-  z-index: 0;
 }
 
 /* ===== GLOW ORBS ===== */
@@ -353,8 +307,7 @@ h1 {
   box-shadow: var(--shadow-btn-hover);
   transform: translateY(-2px);
 }
-.btn-primary:active,
-.btn-primary.router-link-active {
+.btn-primary:active {
   box-shadow: var(--shadow-sm);
   transform: scale(0.97);
 }
@@ -372,8 +325,7 @@ h1 {
   transform: translateY(-2px);
   color: var(--text-accent);
 }
-.btn-outline:active,
-.btn-outline.router-link-active {
+.btn-outline:active {
   background: var(--bg-card-hover);
   transform: scale(0.97);
 }

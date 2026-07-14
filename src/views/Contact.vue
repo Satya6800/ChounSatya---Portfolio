@@ -1,24 +1,17 @@
 <template>
   <section class="contact-page">
     <div class="background-layer">
-      <div class="bubbles">
-        <div class="bubble" v-for="n in 10" :key="n"></div>
-      </div>
-      <div class="grid-overlay"></div>
-      <div class="orb orb-1"></div>
-      <div class="orb orb-2"></div>
-      <div class="orb orb-3"></div>
     </div>
 
     <div class="page-content">
-      <div class="section-head">
+      <div class="section-head" data-aos="fade-up">
         <span class="eyebrow">Contact</span>
         <h2>Ready to build something great?</h2>
         <p>Send a message and let’s turn your idea into a polished product. I’m available for freelance work, collaborations, and full-cycle development.</p>
       </div>
 
       <div class="contact-grid">
-        <div class="feature-panel">
+        <div class="feature-panel" data-aos="fade-right" data-aos-delay="100">
           <p class="feature-text">I’m currently open to new opportunities — say hello.</p>
 
           <div class="email-row">
@@ -56,7 +49,7 @@
           </div>
         </div>
 
-        <div class="contact-card contact-info">
+        <div class="contact-card contact-info" data-aos="fade-left" data-aos-delay="200">
           <h3>Let’s connect</h3>
           <p>Powerful solutions start with a clear conversation. Share your timeline, goals, and budget, and I’ll respond quickly.</p>
 
@@ -106,14 +99,13 @@ const copyEmail = async () => {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700&display=swap');
+
 
 .contact-page {
   position: relative;
   min-height: 100vh;
-  padding: 110px 0 80px;
+  padding: 120px 0 80px;
   color: var(--contact-page-color);
-  background: var(--contact-bg);
   overflow: hidden;
   font-family: 'Syne', sans-serif;
 }

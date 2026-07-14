@@ -1,20 +1,8 @@
 <template>
   <section class="about">
-    <!-- Animated Bubbles -->
-    <div class="bubbles">
-      <div class="bubble" v-for="n in 12" :key="n"></div>
-    </div>
-
-    <!-- Grid Pattern -->
-    <div class="grid-overlay"></div>
-
-    <!-- Glowing Orbs -->
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-
     <div class="container">
       <!-- About Header -->
-      <div class="section-header">
+      <div class="section-header" data-aos="fade-up">
         <div class="badge">About Me</div>
         <h2>Who Am I?</h2>
         <p class="intro-text">
@@ -26,7 +14,7 @@
       <!-- About Grid -->
       <div class="about-grid">
         <!-- Left: Bio Card -->
-        <div class="bio-card">
+        <div class="bio-card" data-aos="fade-right" data-aos-delay="100">
           <div class="card-header">
             <h3>My Story</h3>
             <div class="accent-line"></div>
@@ -47,7 +35,7 @@
         </div>
 
         <!-- Right: Photo Thumbnail -->
-        <div class="photo-card">
+        <div class="photo-card" data-aos="fade-left" data-aos-delay="200">
           <div class="photo-container">
             <div class="photo-glow"></div>
             <div class="photo-ring"></div>
@@ -58,10 +46,10 @@
 
       <!-- Skills Section -->
       <div class="skills-section">
-        <h3 class="section-title">Core Skills</h3>
+        <h3 class="section-title" data-aos="fade-up">Core Skills</h3>
         <div class="skills-grid">
           <!-- Skill Card 1 -->
-          <div class="skill-card">
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
             <div class="skill-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polyline points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3"></polyline>
@@ -75,7 +63,7 @@
           </div>
 
           <!-- Skill Card 2 -->
-          <div class="skill-card">
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
             <div class="skill-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <circle cx="12" cy="12" r="1"></circle>
@@ -90,7 +78,7 @@
           </div>
 
           <!-- Skill Card 3 -->
-          <div class="skill-card">
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
             <div class="skill-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path
@@ -103,7 +91,7 @@
           </div>
 
           <!-- Skill Card 4 -->
-          <div class="skill-card">
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
             <div class="skill-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"></path>
@@ -118,12 +106,12 @@
 
       <!-- Training Timeline -->
       <div class="experience-section">
-        <h3 class="section-title">Training</h3>
+        <h3 class="section-title" data-aos="fade-up">Training</h3>
         <div class="timeline">
 
 
           <!-- Timeline Item 2 -->
-          <div class="timeline-item">
+          <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
             <div class="timeline-marker">
               <div class="marker-dot"></div>
             </div>
@@ -148,10 +136,10 @@
 
       <!-- Education Timeline -->
       <div class="experience-section">
-        <h3 class="section-title">Education</h3>
+        <h3 class="section-title" data-aos="fade-up">Education</h3>
         <div class="timeline">
           <!-- Timeline Item 1 -->
-          <div class="timeline-item">
+          <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
             <div class="timeline-marker">
               <div class="marker-dot"></div>
             </div>
@@ -174,19 +162,19 @@
 
       <!-- Stats Section -->
       <div class="stats-section">
-        <div class="stat-box">
+        <div class="stat-box" data-aos="zoom-in" data-aos-delay="100">
           <div class="stat-number">1<span>+</span></div>
           <div class="stat-name">Years Experience</div>
         </div>
-        <div class="stat-box">
+        <div class="stat-box" data-aos="zoom-in" data-aos-delay="200">
           <div class="stat-number">7<span>+</span></div>
           <div class="stat-name">Projects Completed</div>
         </div>
-        <div class="stat-box">
+        <div class="stat-box" data-aos="zoom-in" data-aos-delay="300">
           <div class="stat-number">18<span>+</span></div>
           <div class="stat-name">Happy Clients</div>
         </div>
-        <div class="stat-box">
+        <div class="stat-box" data-aos="zoom-in" data-aos-delay="400">
           <div class="stat-number">100<span>%</span></div>
           <div class="stat-name">Dedication</div>
         </div>
@@ -200,171 +188,18 @@
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700&display=swap');
+
 
 /* ===== BASE ===== */
 .about {
   position: relative;
   min-height: 100vh;
-  background: var(--hero-bg);
   overflow: hidden;
   font-family: 'Syne', sans-serif;
   padding: 140px 0 80px;
 }
 
-/* ===== ANIMATION LAYERS ===== */
-.bubbles {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-}
 
-.bubble {
-  position: absolute;
-  border-radius: 50%;
-  background: var(--bg-bubble);
-  border: 1px solid var(--bubble-border);
-  animation: floatBubble linear infinite;
-}
-
-@keyframes floatBubble {
-  0% {
-    transform: translateY(0) scale(1);
-    opacity: 0;
-  }
-
-  10% {
-    opacity: 1;
-  }
-
-  90% {
-    opacity: 0.6;
-  }
-
-  100% {
-    transform: translateY(-110vh) scale(1.1);
-    opacity: 0;
-  }
-}
-
-.bubble:nth-child(1) {
-  width: 14px;
-  height: 14px;
-  left: 6%;
-  bottom: -10%;
-  animation-duration: 9s;
-  animation-delay: 0s;
-}
-
-.bubble:nth-child(2) {
-  width: 22px;
-  height: 22px;
-  left: 14%;
-  bottom: -10%;
-  animation-duration: 12s;
-  animation-delay: 1.5s;
-}
-
-.bubble:nth-child(3) {
-  width: 8px;
-  height: 8px;
-  left: 23%;
-  bottom: -10%;
-  animation-duration: 7s;
-  animation-delay: 3s;
-}
-
-.bubble:nth-child(4) {
-  width: 30px;
-  height: 30px;
-  left: 35%;
-  bottom: -10%;
-  animation-duration: 14s;
-  animation-delay: 0.5s;
-}
-
-.bubble:nth-child(5) {
-  width: 16px;
-  height: 16px;
-  left: 50%;
-  bottom: -10%;
-  animation-duration: 10s;
-  animation-delay: 2s;
-}
-
-.bubble:nth-child(6) {
-  width: 10px;
-  height: 10px;
-  left: 62%;
-  bottom: -10%;
-  animation-duration: 8s;
-  animation-delay: 4s;
-}
-
-.bubble:nth-child(7) {
-  width: 24px;
-  height: 24px;
-  left: 72%;
-  bottom: -10%;
-  animation-duration: 13s;
-  animation-delay: 1s;
-}
-
-.bubble:nth-child(8) {
-  width: 18px;
-  height: 18px;
-  left: 83%;
-  bottom: -10%;
-  animation-duration: 11s;
-  animation-delay: 2.5s;
-}
-
-.bubble:nth-child(9) {
-  width: 6px;
-  height: 6px;
-  left: 90%;
-  bottom: -10%;
-  animation-duration: 6s;
-  animation-delay: 0.8s;
-}
-
-.bubble:nth-child(10) {
-  width: 36px;
-  height: 36px;
-  left: 44%;
-  bottom: -10%;
-  animation-duration: 16s;
-  animation-delay: 3.5s;
-}
-
-.bubble:nth-child(11) {
-  width: 12px;
-  height: 12px;
-  left: 18%;
-  bottom: -10%;
-  animation-duration: 9s;
-  animation-delay: 5s;
-}
-
-.bubble:nth-child(12) {
-  width: 20px;
-  height: 20px;
-  left: 78%;
-  bottom: -10%;
-  animation-duration: 11s;
-  animation-delay: 1.8s;
-}
-
-.grid-overlay {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(var(--grid-color) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
-  background-size: 48px 48px;
-  z-index: 0;
-}
 
 .orb {
   position: absolute;

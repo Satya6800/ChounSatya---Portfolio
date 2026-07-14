@@ -2,30 +2,30 @@
     <nav class="glass-navbar fixed-top" :class="{ 'scrolled': isScrolled }">
         <div class="navbar-container container-fluid">
             <!-- Logo -->
-            <router-link class="navbar-logo" to="/">
+            <a class="navbar-logo" href="#home" @click.prevent="scrollToSection('home')">
                 <span class="logo-text">CHOUN SATYA</span>
-            </router-link>
+            </a>
 
             <!-- Navigation Menu -->
             <nav class="nav-menu" :class="{ active: isOpen }">
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <router-link class="nav-link" to="/" @click="isOpen = false">Home</router-link>
+                        <a href="#home" class="nav-link" :class="{ 'router-link-active': activeSection === 'home' }" @click.prevent="scrollToSection('home')">Home</a>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" to="/about" @click="isOpen = false">About</router-link>
+                        <a href="#about" class="nav-link" :class="{ 'router-link-active': activeSection === 'about' }" @click.prevent="scrollToSection('about')">About</a>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" to="/portfolio" @click="isOpen = false">Portfolio</router-link>
+                        <a href="#portfolio" class="nav-link" :class="{ 'router-link-active': activeSection === 'portfolio' }" @click.prevent="scrollToSection('portfolio')">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" to="/services" @click="isOpen = false">Services</router-link>
+                        <a href="#services" class="nav-link" :class="{ 'router-link-active': activeSection === 'services' }" @click.prevent="scrollToSection('services')">Services</a>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" to="/skills" @click="isOpen = false">Skills</router-link>
+                        <a href="#skills" class="nav-link" :class="{ 'router-link-active': activeSection === 'skills' }" @click.prevent="scrollToSection('skills')">Skills</a>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" to="/contact" @click="isOpen = false">Contact</router-link>
+                        <a href="#contact" class="nav-link" :class="{ 'router-link-active': activeSection === 'contact' }" @click.prevent="scrollToSection('contact')">Contact</a>
                     </li>
                 </ul>
             </nav>
@@ -337,9 +337,37 @@ const { isDark, toggleTheme } = useTheme();
 
 const isOpen = ref(false);
 const isScrolled = ref(false);
+const activeSection = ref('home');
 
 const handleScroll = () => {
     isScrolled.value = window.scrollY > 50;
+    
+    // Scroll spy logic
+    const sections = ['home', 'about', 'portfolio', 'services', 'skills', 'contact'];
+    let current = 'home';
+    
+    for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+            const rect = element.getBoundingClientRect();
+            // If the top of the section is near the top of the viewport (adjust offset as needed)
+            if (rect.top <= 200) {
+                current = section;
+            }
+        }
+    }
+    activeSection.value = current;
+};
+
+const scrollToSection = (id) => {
+    isOpen.value = false;
+    const element = document.getElementById(id);
+    if (element) {
+        window.scrollTo({
+            top: element.offsetTop - 80, // Adjust for navbar height
+            behavior: 'smooth'
+        });
+    }
 };
 
 onMounted(() => {

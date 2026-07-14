@@ -1,16 +1,12 @@
 <template>
   <section class="services-page">
     <div class="background-layer">
-      <div class="bubbles">
-        <div class="bubble" v-for="n in 10" :key="n"></div>
-      </div>
-      <div class="grid-overlay"></div>
       <div class="orb orb-1"></div>
       <div class="orb orb-2"></div>
     </div>
 
     <div class="page-content">
-      <div class="section-head">
+      <div class="section-head" data-aos="fade-up">
         <span class="eyebrow">Services</span>
         <h2>What I Deliver</h2>
         <p>From polished web apps to scalable backend systems, I provide modern solutions built for speed, usability,
@@ -18,7 +14,7 @@
       </div>
 
       <div class="service-grid">
-        <article class="service-card">
+        <article class="service-card" data-aos="zoom-in" data-aos-delay="100">
           <div class="service-icon icon-design">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
           </div>
@@ -27,7 +23,7 @@
           </p>
         </article>
 
-        <article class="service-card">
+        <article class="service-card" data-aos="zoom-in" data-aos-delay="200">
           <div class="service-icon icon-code">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
           </div>
@@ -35,7 +31,7 @@
           <p>Building responsive, fast websites using Vue, JavaScript, and modern frontend architectures.</p>
         </article>
 
-        <article class="service-card">
+        <article class="service-card" data-aos="zoom-in" data-aos-delay="300">
           <div class="service-icon icon-api">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
           </div>
@@ -43,7 +39,7 @@
           <p>Designing secure RESTful APIs, database schemas, and server-side logic for reliable app performance.</p>
         </article>
 
-        <article class="service-card">
+        <article class="service-card" data-aos="zoom-in" data-aos-delay="400">
           <div class="service-icon icon-speed">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg>
           </div>
@@ -53,17 +49,17 @@
       </div>
 
       <div class="feature-row">
-        <div class="feature-card">
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
           <span class="feature-badge">Strategy</span>
           <h4>Consultative Planning</h4>
           <p>Aligning your project goals with technology choices and growth-driven product features.</p>
         </div>
-        <div class="feature-card">
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
           <span class="feature-badge">Delivery</span>
           <h4>Fast Iteration</h4>
           <p>Regular updates, clean code reviews, and production-ready releases for every milestone.</p>
         </div>
-        <div class="feature-card">
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
           <span class="feature-badge">Support</span>
           <h4>Continued Growth</h4>
           <p>Post-launch maintenance, performance monitoring, and feature expansion guidance.</p>
@@ -71,7 +67,7 @@
       </div>
 
       <section class="certificates-section">
-        <div class="section-head small-head">
+        <div class="section-head small-head" data-aos="fade-up">
           <span class="eyebrow">Certifications</span>
           <h2>My Professional Certificates</h2>
           <p>Trusted credentials and training that reinforce the quality of the work I deliver across web development,
@@ -126,13 +122,12 @@ const certificates = [
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700&display=swap');
+
 
 .services-page {
   position: relative;
   min-height: 100vh;
-  padding: 110px 0 80px;
-  background: var(--hero-bg);
+  padding: 120px 0 80px;
   color: var(--text-primary);
   overflow: hidden;
   font-family: 'Syne', sans-serif;

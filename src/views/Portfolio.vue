@@ -1,16 +1,8 @@
 <template>
   <section class="portfolio-section">
-    <!-- Background Effects -->
-    <div class="bubbles">
-      <div class="bubble" v-for="n in 12" :key="n"></div>
-    </div>
-
-    <!-- Grid Pattern Overlay -->
-    <div class="grid-overlay"></div>
-
     <!-- Glow Orbs -->
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
+    
+   
 
     <!-- Water Ripple -->
     <div class="ripple-wrap">
@@ -20,7 +12,7 @@
 
     <div class="container">
       <!-- Header -->
-      <div class="portfolio-header">
+      <div class="portfolio-header" data-aos="fade-up">
         <h1 class="portfolio-title">
           My <span class="highlight">Portfolio</span>
         </h1>
@@ -30,7 +22,7 @@
       </div>
 
       <!-- Filter Tags -->
-      <div class="filter-tags">
+      <div class="filter-tags" data-aos="fade-up" data-aos-delay="100">
         <button
           @click="selectedFilter = 'all'"
           :class="{ active: selectedFilter === 'all' }"
@@ -50,7 +42,7 @@
       </div>
 
       <!-- Projects Grid -->
-      <div class="projects-grid">
+      <div class="projects-grid" data-aos="fade-up" data-aos-delay="200">
         <transition-group name="fade" tag="div" class="grid-wrapper">
           <ProjectCard
             v-for="project in filteredProjects"
@@ -191,7 +183,7 @@ const filteredProjects = computed(() => {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700&display=swap');
+
 
 /* ===== BUBBLES ===== */
 .bubbles {
@@ -284,7 +276,6 @@ const filteredProjects = computed(() => {
 .portfolio-section {
   position: relative;
   min-height: 100vh;
-  background: var(--hero-bg);
   overflow: hidden;
   font-family: 'Syne', sans-serif;
   display: flex;
