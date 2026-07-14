@@ -173,10 +173,12 @@ const scrollToSection = (id) => {
 }
 
 .overlay-text {
-  font-size: 3.5rem;
+  font-size: clamp(1.8rem, 6vw, 3.5rem);
   font-weight: 700;
   color: #fff;
-  letter-spacing: 4px;
+  letter-spacing: clamp(2px, 1vw, 4px);
+  text-align: center;
+  padding: 0 20px;
   text-transform: uppercase;
   z-index: 4;
   opacity: 1;

@@ -670,15 +670,20 @@
 .company-thumbnail.logos-3 {
   width: auto;
   display: inline-flex;
-  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
   background: white;
-  padding: 4px 12px;
+  padding: 8px 16px;
 }
 
 .company-thumbnail.logos-3 img {
   width: auto;
+  height: 100%;
+  max-height: 48px;
   padding: 0;
-  max-width: 80px;
+  object-fit: contain;
+  max-width: none;
 }
 
 .timeline-header {
