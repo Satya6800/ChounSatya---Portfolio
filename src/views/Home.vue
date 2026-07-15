@@ -16,14 +16,14 @@
         <div class="left">
           <div class="badge" data-aos="fade-down" data-aos-delay="100">Available for Work</div>
 
-          <h1 data-aos="fade-up" data-aos-delay="200">Hi, I'm </h1>
-          <h1 data-aos="fade-up" data-aos-delay="300"><span class="name">Choun Satya</span></h1>
-          <p class="subtitle" data-aos="fade-up" data-aos-delay="350">Full Stack Developer</p>
-          <p class="desc" data-aos="fade-up" data-aos-delay="400">
+          <h1>Hi, I'm </h1>
+          <h1><span class="name">Choun Satya</span></h1>
+          <p class="subtitle">Full Stack Developer</p>
+          <p class="desc">
             I build modern, scalable web applications with clean UI and powerful backend systems.
           </p>
 
-          <div class="btns" data-aos="fade-up" data-aos-delay="500">
+          <div class="btns">
             <a href="#portfolio" class="btn btn-primary" @click.prevent="scrollToSection('portfolio')">
               <svg class="icon" viewBox="0 0 20 20">
                 <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-.293.707L13 10.414V17a1 1 0 01-1.447.894l-4-2A1 1 0 017 15v-4.586L3.293 6.707A1 1 0 013 6V4z"/>
@@ -41,7 +41,7 @@
             <a href="#contact" class="btn btn-outline" @click.prevent="scrollToSection('contact')">Hire Me →</a>
           </div>
 
-          <div class="social" data-aos="fade-up" data-aos-delay="600">
+          <div class="social">
             <a href="https://github.com/Satya6800" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
               <svg viewBox="0 0 1024 1024" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path d="M512 76C281.6 76 96 261.6 96 492c0 176.4 114.4 325.8 273.2 378.8 20 3.6 27.4-8.6 27.4-19.2 0-9.4-.4-40.8-.6-74-111.2 24.2-134.6-53.6-134.6-53.6-18.2-46.2-44.4-58.6-44.4-58.6-36.4-24.8 2.8-24.2 2.8-24.2 40.2 2.8 61.4 41.2 61.4 41.2 35.8 61.2 93.8 43.6 116.6 33.4 3.6-25.8 14-43.6 25.4-53.6-88.8-10.1-182-44.4-182-197.4 0-43.6 15.6-79.2 41.2-107.2-4.2-10.1-17.8-50.8 3.8-105.8 0 0 33.6-10.8 110 40.8 31.8-8.8 65.8-13.2 99.6-13.4 33.8.2 67.8 4.6 99.6 13.4 76.4-51.6 110-40.8 110-40.8 21.6 55 8 95.6 3.8 105.8 25.6 28 41.2 63.6 41.2 107.2 0 153.6-93.4 187.2-182 197.2 14.4 12.4 27.4 36.8 27.4 74.2 0 53.6-.4 96.8-.4 110 0 10.6 7.2 23 27.6 19.2C813.6 817.8 928 668.4 928 492 928 261.6 742.4 76 512 76Z"/>
