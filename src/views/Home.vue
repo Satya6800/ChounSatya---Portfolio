@@ -196,7 +196,7 @@ const scrollToSection = (id) => {
 /* ===== BASE ===== */
 .hero {
   position: relative;
-  min-height: 120vh;
+  min-height: 110vh;
   overflow: hidden;
   display: flex;
   align-items: center;
