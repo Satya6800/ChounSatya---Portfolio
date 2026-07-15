@@ -22,12 +22,12 @@ const getThemeColors = () => {
   return isDark.value
     ? {
         particle: 'rgba(0, 212, 255, 0.6)',
-        line: 'rgba(0, 212, 255, 0.15)',
+        line: 'rgba(0, 212, 255, 0.1)',
         polygon: 'rgba(0, 212, 255, 0.05)'
       }
     : {
         particle: 'rgba(37, 99, 235, 0.6)',
-        line: 'rgba(37, 99, 235, 0.15)',
+        line: 'rgba(37, 99, 235, 0.1)',
         polygon: 'rgba(37, 99, 235, 0.05)'
       };
 };
@@ -93,7 +93,7 @@ const animate = () => {
         ctx.beginPath();
         ctx.moveTo(particles[i].x, particles[i].y);
         ctx.lineTo(particles[j].x, particles[j].y);
-        ctx.strokeStyle = colors.line.replace('0.15)', `${0.2 * opacity})`);
+        ctx.strokeStyle = colors.line.replace('0.1)', `${0.1 * opacity})`);
         ctx.lineWidth = 1;
         ctx.stroke();
       }

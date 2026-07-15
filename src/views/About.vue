@@ -577,7 +577,7 @@
 .timeline::before {
   content: '';
   position: absolute;
-  left: 20px;
+  left: 29px;
   top: 0;
   bottom: 0;
   width: 2px;
@@ -669,7 +669,8 @@
 
 .company-thumbnail.logos-3 {
   width: 100%;
-  max-width: fit-content;
+  max-width: 100%;
+  height: auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -801,7 +802,7 @@
   }
 
   .timeline::before {
-    left: 8px;
+    left: 19px;
   }
 
   .timeline-item {
@@ -830,12 +831,12 @@
   }
 
   .company-thumbnail.logos-3 {
-    gap: 12px;
-    padding: 8px 12px;
+    gap: 8px;
+    padding: 8px;
   }
 
   .company-thumbnail.logos-3 img {
-    max-height: 36px;
+    max-height: 28px;
   }
 }
 
