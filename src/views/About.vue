@@ -668,30 +668,34 @@
 }
 
 .company-thumbnail.logos-3 {
-  width: auto;
-  display: inline-flex;
+  width: 100%;
+  max-width: fit-content;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 16px;
   background: white;
   padding: 8px 16px;
+  box-sizing: border-box;
 }
 
 .company-thumbnail.logos-3 img {
   width: auto;
-  height: 100%;
+  height: auto;
   max-height: 48px;
   padding: 0;
   object-fit: contain;
-  max-width: none;
+  max-width: 100%;
 }
 
 .timeline-header {
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  align-items: flex-start;
+  flex-wrap: wrap;
   margin-bottom: 8px;
-  gap: 16px;
+  gap: 8px 16px;
 }
 
 .timeline-content h4 {
@@ -823,6 +827,15 @@
   .skills-section,
   .experience-section {
     margin-bottom: 60px;
+  }
+
+  .company-thumbnail.logos-3 {
+    gap: 12px;
+    padding: 8px 12px;
+  }
+
+  .company-thumbnail.logos-3 img {
+    max-height: 36px;
   }
 }
 

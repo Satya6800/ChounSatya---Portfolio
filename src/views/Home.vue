@@ -535,9 +535,9 @@ h1 {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+  .hero { align-items: flex-start; padding-top: 120px; margin-top: 40px; min-height: 100vh; }
   .row { grid-template-columns: 1fr; gap: 40px; }
-  .right { order: -1; }
-  .img-wrap { width: 220px; height: 250px; }
+  .img-wrap { width: 220px; height: 250px; margin: 0 auto; }
   .tag-1, .tag-2, .tag-3 { display: none; }
   .stats { gap: 16px; }
 }
