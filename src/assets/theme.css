@@ -245,26 +245,31 @@
   --overlay-bg: var(--brand-blue);
 }
 
-/* ===== GLOBAL TRANSITIONS ===== */
-*,
-*::before,
-*::after {
-  transition-property: background-color, border-color, color, box-shadow, opacity;
-  transition-duration: 300ms;
-  transition-timing-function: ease;
+/* ===== THEME TRANSITIONS ===== */
+/* Primary: View Transitions API handles the crossfade (see useTheme.js).
+   This CSS only controls the animation properties of that API-driven fade. */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.38s;
+  animation-timing-function: ease-in-out;
+  mix-blend-mode: normal;
 }
 
-/* Exclude animation-heavy elements from blanket transition */
-.bubble,
-.ripple,
-.orb,
-.img-ring,
-.img-ring-2,
-.img-glow,
-.pulse-ring,
-[class*='animate'],
-[style*='animation'] {
-  transition: none;
+/* Fallback for browsers without View Transitions API:
+   transition only on the root element — changes cascade via CSS vars */
+html {
+  transition: background-color 0.38s ease, color 0.38s ease;
+}
+
+/* Respect user's motion preference */
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 0.01ms !important;
+  }
+  html {
+    transition: none !important;
+  }
 }
 
 /* ===== CRITICAL OVERRIDES (beat Bootstrap) ===== */

@@ -1,4 +1,4 @@
-import { ref, watch } from 'vue';
+import { ref } from 'vue';
 
 const STORAGE_KEY = 'portfolio-theme';
 
@@ -21,19 +21,26 @@ function initTheme() {
   applyTheme(isDark.value);
 }
 
-// Watch for changes and apply them
-watch(isDark, (val) => {
-  applyTheme(val);
-});
-
-// Auto-init when module first loads (safe because this runs in browser)
 if (typeof window !== 'undefined') {
   initTheme();
 }
 
 export function useTheme() {
   function toggleTheme() {
-    isDark.value = !isDark.value;
+    const newVal = !isDark.value;
+
+    // Update the reactive state immediately so the icon swaps at once
+    isDark.value = newVal;
+
+    if (document.startViewTransition) {
+      // Modern browsers: GPU snapshot crossfade — zero per-element repaint
+      document.startViewTransition(() => {
+        applyTheme(newVal);
+      });
+    } else {
+      // Fallback: instant apply; CSS transition on <html> handles the fade
+      applyTheme(newVal);
+    }
   }
 
   return { isDark, toggleTheme };

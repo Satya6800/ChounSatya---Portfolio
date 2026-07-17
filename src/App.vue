@@ -32,7 +32,6 @@ import Contact from './views/Contact.vue';
 html, body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  transition: background-color 0.3s ease, color 0.3s ease;
   margin: 0;
   padding: 0;
   min-height: 100vh;
