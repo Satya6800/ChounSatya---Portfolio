@@ -155,6 +155,9 @@
               <p class="description">
                 Expected Graduation: 2026
               </p>
+              <p class="description">
+                GPA: 3.12
+              </p>
             </div>
           </div>
         </div>
@@ -715,7 +718,7 @@
 
 .company {
   font-size: 13px;
-  color: var(--brand-purple);
+  color: var(--text-accent);
   font-weight: 600;
   margin: 0 0 8px 0;
 }
