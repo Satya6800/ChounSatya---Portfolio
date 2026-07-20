@@ -1,8 +1,8 @@
 <template>
   <section class="portfolio-section">
     <!-- Glow Orbs -->
-    
-   
+
+
 
     <!-- Water Ripple -->
     <div class="ripple-wrap">
@@ -23,20 +23,11 @@
 
       <!-- Filter Tags -->
       <div class="filter-tags" data-aos="fade-up" data-aos-delay="100">
-        <button
-          @click="selectedFilter = 'all'"
-          :class="{ active: selectedFilter === 'all' }"
-          class="filter-tag"
-        >
+        <button @click="selectedFilter = 'all'" :class="{ active: selectedFilter === 'all' }" class="filter-tag">
           All Projects
         </button>
-        <button
-          v-for="category in categories"
-          :key="category"
-          @click="selectedFilter = category"
-          :class="{ active: selectedFilter === category }"
-          class="filter-tag"
-        >
+        <button v-for="category in categories" :key="category" @click="selectedFilter = category"
+          :class="{ active: selectedFilter === category }" class="filter-tag">
           {{ category }}
         </button>
       </div>
@@ -44,12 +35,7 @@
       <!-- Projects Grid -->
       <div class="projects-grid" data-aos="fade-up" data-aos-delay="200">
         <transition-group name="fade" tag="div" class="grid-wrapper">
-          <ProjectCard
-            v-for="project in filteredProjects"
-            :key="project.id"
-            :project="project"
-            class="project-item"
-          />
+          <ProjectCard v-for="project in filteredProjects" :key="project.id" :project="project" class="project-item" />
         </transition-group>
       </div>
 
@@ -72,6 +58,7 @@ import futureTechImage from '@/assets/image/futuretech.png'
 import motulImage from '@/assets/image/motul.png'
 import amadoImage from '@/assets/image/amado.png'
 import tosReamImage from '@/assets/image/tosrean.png'
+import jubPetImage from '@/assets/image/jubpet.png'
 
 const selectedFilter = ref('all');
 
@@ -79,7 +66,7 @@ const projects = ref([
   {
     id: 1,
     title: 'Work Sync',
-    description: 'Dynamic Frontend project solution with premium features, Api integration, and real-time inventory management.',
+    description: 'Dynamic Frontend project solution with premium features, Api integration, and real-time inventory management under Scolarship 100%  of Ministry of Post and Telecommunication (MPTC) .',
     image: workSyncImage,
     category: 'Web Development',
     technologies: ['Vue.js', 'JavaScript', 'Bootstrap', 'API'],
@@ -93,27 +80,28 @@ const projects = ref([
   },
   {
     id: 2,
-    title: 'Phunk Topic',
-    description: 'Static Frountend Web Development with Article Music topic.',
-    image: phunkTopicImage,
+    title: 'Jub Pet',
+    description: 'Full Stack Web Development Project with Clinic Management with JWT Authentication and REST Full API under Scolarship 100%  of Ministry of Post and Telecommunication (MPTC) .',
+    image: jubPetImage,
     category: 'Web Development',
-    technologies: ['HTML', 'CSS', 'JavaScript','BootStrap'],
+    technologies: ['Vue 3', 'NodeJS', 'ExpressJS', 'MySQL', 'JWT', 'REST API'],
     stats: {
-      'Features': '25+',
-      'Downloads': '50k+',
-      'Rating': '4.8★'
+      'Workouts': '100+',
+      'Monthly Users': '20k+',
+      'Rating': '4.9★'
     },
-    link: 'https://phunk-topic-v2.vercel.app/',
-    github: 'https://github.com/Satya6800/PhunkTopicV2.git'
+    link: 'https://jubpet.linkpc.net',
+    github: 'https://github.com/Satya6800/JubPet-Frontend'
   },
-  
+
+
   {
     id: 3,
     title: 'Future Tech',
-    description: 'Static web development project for managing multiple social media accounts with scheduling, analytics, and team collaboration.',
+    description: 'Static web development project for managing multiple social media accounts with scheduling, analytics, and team collaboration under Scolarship 100%  of Ministry of Post and Telecommunication (MPTC) .',
     image: futureTechImage,
     category: 'Web Development',
-    technologies: ['HTML', 'CSS', 'BOOTSTRAP','JAVASCRIPT'],
+    technologies: ['HTML', 'CSS', 'BOOTSTRAP', 'JAVASCRIPT'],
     stats: {
       'Platforms': '8',
       'Scheduling': '500+/mo',
@@ -127,7 +115,7 @@ const projects = ref([
     title: 'Motul Ecommerce',
     description: 'Static Web Frontend project with ecommerce store.',
     image: motulImage,
-     category: 'Web Development',
+    category: 'Web Development',
     technologies: ['html', 'css', 'bootstrap'],
     stats: {
       'Accuracy': '94%',
@@ -166,7 +154,24 @@ const projects = ref([
     },
     link: '',
     github: 'https://github.com/Satya6800/tos-rean-app.git'
+  },
+
+  {
+    id: 7,
+    title: 'Phunk Topic',
+    description: 'Static Frountend Web Development with Article Music topic.',
+    image: phunkTopicImage,
+    category: 'Web Development',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'BootStrap'],
+    stats: {
+      'Features': '25+',
+      'Downloads': '50k+',
+      'Rating': '4.8★'
+    },
+    link: 'https://phunk-topic-v2.vercel.app/',
+    github: 'https://github.com/Satya6800/PhunkTopicV2.git'
   }
+
 ]);
 
 const categories = computed(() => {
@@ -183,8 +188,6 @@ const filteredProjects = computed(() => {
 </script>
 
 <style scoped>
-
-
 /* ===== BUBBLES ===== */
 .bubbles {
   position: absolute;
@@ -202,52 +205,185 @@ const filteredProjects = computed(() => {
 }
 
 @keyframes floatBubble {
-  0%   { transform: translateY(0) scale(1); opacity: 0; }
-  10%  { opacity: 1; }
-  90%  { opacity: 0.6; }
-  100% { transform: translateY(-110vh) scale(1.1); opacity: 0; }
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: translateY(-110vh) scale(1.1);
+    opacity: 0;
+  }
 }
 
 /* Stagger each bubble */
-.bubble:nth-child(1)  { width:14px;  height:14px;  left:6%;   bottom:-10%; animation-duration:9s;  animation-delay:0s; }
-.bubble:nth-child(2)  { width:22px;  height:22px;  left:14%;  bottom:-10%; animation-duration:12s; animation-delay:1.5s; }
-.bubble:nth-child(3)  { width:8px;   height:8px;   left:23%;  bottom:-10%; animation-duration:7s;  animation-delay:3s; }
-.bubble:nth-child(4)  { width:30px;  height:30px;  left:35%;  bottom:-10%; animation-duration:14s; animation-delay:0.5s; }
-.bubble:nth-child(5)  { width:16px;  height:16px;  left:50%;  bottom:-10%; animation-duration:10s; animation-delay:2s; }
-.bubble:nth-child(6)  { width:10px;  height:10px;  left:62%;  bottom:-10%; animation-duration:8s;  animation-delay:4s; }
-.bubble:nth-child(7)  { width:24px;  height:24px;  left:72%;  bottom:-10%; animation-duration:13s; animation-delay:1s; }
-.bubble:nth-child(8)  { width:18px;  height:18px;  left:83%;  bottom:-10%; animation-duration:11s; animation-delay:2.5s; }
-.bubble:nth-child(9)  { width:6px;   height:6px;   left:90%;  bottom:-10%; animation-duration:6s;  animation-delay:0.8s; }
-.bubble:nth-child(10) { width:36px;  height:36px;  left:44%;  bottom:-10%; animation-duration:16s; animation-delay:3.5s; }
-.bubble:nth-child(11) { width:12px;  height:12px;  left:18%;  bottom:-10%; animation-duration:9s;  animation-delay:5s; }
-.bubble:nth-child(12) { width:20px;  height:20px;  left:78%;  bottom:-10%; animation-duration:11s; animation-delay:1.8s; }
+.bubble:nth-child(1) {
+  width: 14px;
+  height: 14px;
+  left: 6%;
+  bottom: -10%;
+  animation-duration: 9s;
+  animation-delay: 0s;
+}
+
+.bubble:nth-child(2) {
+  width: 22px;
+  height: 22px;
+  left: 14%;
+  bottom: -10%;
+  animation-duration: 12s;
+  animation-delay: 1.5s;
+}
+
+.bubble:nth-child(3) {
+  width: 8px;
+  height: 8px;
+  left: 23%;
+  bottom: -10%;
+  animation-duration: 7s;
+  animation-delay: 3s;
+}
+
+.bubble:nth-child(4) {
+  width: 30px;
+  height: 30px;
+  left: 35%;
+  bottom: -10%;
+  animation-duration: 14s;
+  animation-delay: 0.5s;
+}
+
+.bubble:nth-child(5) {
+  width: 16px;
+  height: 16px;
+  left: 50%;
+  bottom: -10%;
+  animation-duration: 10s;
+  animation-delay: 2s;
+}
+
+.bubble:nth-child(6) {
+  width: 10px;
+  height: 10px;
+  left: 62%;
+  bottom: -10%;
+  animation-duration: 8s;
+  animation-delay: 4s;
+}
+
+.bubble:nth-child(7) {
+  width: 24px;
+  height: 24px;
+  left: 72%;
+  bottom: -10%;
+  animation-duration: 13s;
+  animation-delay: 1s;
+}
+
+.bubble:nth-child(8) {
+  width: 18px;
+  height: 18px;
+  left: 83%;
+  bottom: -10%;
+  animation-duration: 11s;
+  animation-delay: 2.5s;
+}
+
+.bubble:nth-child(9) {
+  width: 6px;
+  height: 6px;
+  left: 90%;
+  bottom: -10%;
+  animation-duration: 6s;
+  animation-delay: 0.8s;
+}
+
+.bubble:nth-child(10) {
+  width: 36px;
+  height: 36px;
+  left: 44%;
+  bottom: -10%;
+  animation-duration: 16s;
+  animation-delay: 3.5s;
+}
+
+.bubble:nth-child(11) {
+  width: 12px;
+  height: 12px;
+  left: 18%;
+  bottom: -10%;
+  animation-duration: 9s;
+  animation-delay: 5s;
+}
+
+.bubble:nth-child(12) {
+  width: 20px;
+  height: 20px;
+  left: 78%;
+  bottom: -10%;
+  animation-duration: 11s;
+  animation-delay: 1.8s;
+}
 
 /* ===== WATER RIPPLES ===== */
 .ripple-wrap {
   position: absolute;
-  bottom: -60px; left: 50%;
+  bottom: -60px;
+  left: 50%;
   transform: translateX(-50%);
-  width: 700px; height: 200px;
+  width: 700px;
+  height: 200px;
   pointer-events: none;
   z-index: 0;
 }
 
 .ripple {
   position: absolute;
-  bottom: 0; left: 50%;
+  bottom: 0;
+  left: 50%;
   transform: translateX(-50%);
   border-radius: 50%;
   border: 1px solid var(--border-color);
   animation: rippleOut 6s ease-out infinite;
 }
 
-.ripple:nth-child(1) { width:200px; height:60px;  animation-delay:0s; }
-.ripple:nth-child(2) { width:400px; height:100px; animation-delay:1.5s; }
-.ripple:nth-child(3) { width:600px; height:140px; animation-delay:3s; }
+.ripple:nth-child(1) {
+  width: 200px;
+  height: 60px;
+  animation-delay: 0s;
+}
+
+.ripple:nth-child(2) {
+  width: 400px;
+  height: 100px;
+  animation-delay: 1.5s;
+}
+
+.ripple:nth-child(3) {
+  width: 600px;
+  height: 140px;
+  animation-delay: 3s;
+}
 
 @keyframes rippleOut {
-  0%   { opacity: 0.6; transform: translateX(-50%) scaleY(1); }
-  100% { opacity: 0;   transform: translateX(-50%) scaleY(1.3); border-width: 0; }
+  0% {
+    opacity: 0.6;
+    transform: translateX(-50%) scaleY(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) scaleY(1.3);
+    border-width: 0;
+  }
 }
 
 /* ===== GRID PATTERN ===== */
@@ -269,8 +405,21 @@ const filteredProjects = computed(() => {
   z-index: 0;
 }
 
-.orb-1 { width:400px; height:400px; top:-80px; right:-60px;  background: var(--orb-1-color); }
-.orb-2 { width:300px; height:300px; bottom:-50px; left:-80px; background: var(--orb-2-color); }
+.orb-1 {
+  width: 400px;
+  height: 400px;
+  top: -80px;
+  right: -60px;
+  background: var(--orb-1-color);
+}
+
+.orb-2 {
+  width: 300px;
+  height: 300px;
+  bottom: -50px;
+  left: -80px;
+  background: var(--orb-2-color);
+}
 
 /* ===== MAIN SECTION ===== */
 .portfolio-section {
@@ -302,6 +451,7 @@ const filteredProjects = computed(() => {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -360,6 +510,7 @@ const filteredProjects = computed(() => {
     opacity: 0;
     transform: translateY(-20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -432,18 +583,36 @@ const filteredProjects = computed(() => {
   animation: cardEntry 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.project-item:nth-child(1) { animation-delay: 0s; }
-.project-item:nth-child(2) { animation-delay: 0.1s; }
-.project-item:nth-child(3) { animation-delay: 0.2s; }
-.project-item:nth-child(4) { animation-delay: 0.3s; }
-.project-item:nth-child(5) { animation-delay: 0.4s; }
-.project-item:nth-child(6) { animation-delay: 0.5s; }
+.project-item:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.project-item:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.project-item:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.project-item:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.project-item:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.project-item:nth-child(6) {
+  animation-delay: 0.5s;
+}
 
 @keyframes cardEntry {
   from {
     opacity: 0;
     transform: translateY(40px) scale(0.8);
   }
+
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -475,6 +644,7 @@ const filteredProjects = computed(() => {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -488,9 +658,12 @@ const filteredProjects = computed(() => {
 }
 
 @keyframes bounce {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-20px);
   }
@@ -559,5 +732,3 @@ const filteredProjects = computed(() => {
   }
 }
 </style>
-
-
