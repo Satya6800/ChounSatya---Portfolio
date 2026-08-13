@@ -52,19 +52,35 @@
 <script setup>
 import { ref, computed } from 'vue';
 import ProjectCard from '@/components/ProjectCard.vue';
+import khmerOcrImage from '@/assets/image/khmer_ocr.png';
 import workSyncImage from '@/assets/image/worksync.png';
-import phunkTopicImage from '@/assets/image/phunk.png'
-import futureTechImage from '@/assets/image/futuretech.png'
-import motulImage from '@/assets/image/motul.png'
-import amadoImage from '@/assets/image/amado.png'
-import tosReamImage from '@/assets/image/tosrean.png'
-import jubPetImage from '@/assets/image/jubpet.png'
+import phunkTopicImage from '@/assets/image/phunk.png';
+import futureTechImage from '@/assets/image/futuretech.png';
+import motulImage from '@/assets/image/motul.png';
+import amadoImage from '@/assets/image/amado.png';
+import tosReamImage from '@/assets/image/tosrean.png';
+import jubPetImage from '@/assets/image/jubpet.png';
 
 const selectedFilter = ref('all');
 
 const projects = ref([
   {
     id: 1,
+    title: 'Khmer OCR',
+    description: 'Frontend project with Instantly convert photos, scanned documents, and live speech dictation into editable Khmer Unicode text 100% free and private on your device.',
+    image: khmerOcrImage,
+    category: 'Web Development',
+    technologies: ['React JS', 'Tailwind CSS', 'AI OCR', 'Speech API'],
+    stats: {
+      'Accuracy': '99.4%',
+      'Privacy': '100% Private',
+      'Engine': 'On-Device'
+    },
+    link: 'https://khmer-ocr-nine.vercel.app/',
+    github: 'https://github.com/Satya6800/KhmerOCR.git'
+  },
+  {
+    id: 2,
     title: 'Work Sync',
     description: 'Dynamic Frontend project solution with premium features, Api integration, and real-time inventory management under Scolarship 100%  of Ministry of Post and Telecommunication (MPTC) .',
     image: workSyncImage,
@@ -79,7 +95,7 @@ const projects = ref([
     github: 'https://github.com/Satya6800/WorkSync.git'
   },
   {
-    id: 2,
+    id: 3,
     title: 'Jub Pet',
     description: 'Full Stack Web Development Project with Clinic Management with JWT Authentication and REST Full API under Scolarship 100%  of Ministry of Post and Telecommunication (MPTC) .',
     image: jubPetImage,
@@ -93,10 +109,8 @@ const projects = ref([
     link: 'https://jubpet.linkpc.net',
     github: 'https://github.com/Satya6800/JubPet-Frontend'
   },
-
-
   {
-    id: 3,
+    id: 4,
     title: 'Future Tech',
     description: 'Static web development project for managing multiple social media accounts with scheduling, analytics, and team collaboration under Scolarship 100%  of Ministry of Post and Telecommunication (MPTC) .',
     image: futureTechImage,
@@ -111,7 +125,7 @@ const projects = ref([
     github: 'https://github.com/reachBorinhun/Future-Tech-Pro.git'
   },
   {
-    id: 4,
+    id: 5,
     title: 'Motul Ecommerce',
     description: 'Static Web Frontend project with ecommerce store.',
     image: motulImage,
@@ -126,7 +140,7 @@ const projects = ref([
     github: 'https://github.com/Satya6800/Motul.git'
   },
   {
-    id: 5,
+    id: 6,
     title: 'Amado Advanture',
     description: 'Advanced data visualization and business intelligence platform with custom chart types and real-time data sync.',
     image: amadoImage,
@@ -141,7 +155,7 @@ const projects = ref([
     github: 'https://github.com/Satya6800/amado.git'
   },
   {
-    id: 6,
+    id: 7,
     title: 'Tos Rean App',
     description: 'Static Mobile App Development Project with Education app platfrom Elearning',
     image: tosReamImage,
@@ -155,9 +169,8 @@ const projects = ref([
     link: '',
     github: 'https://github.com/Satya6800/tos-rean-app.git'
   },
-
   {
-    id: 7,
+    id: 8,
     title: 'Phunk Topic',
     description: 'Static Frountend Web Development with Article Music topic.',
     image: phunkTopicImage,
