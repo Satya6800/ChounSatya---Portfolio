@@ -8,13 +8,13 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 const app = createApp(App)
-
 app.mount('#app')
 
 AOS.init({
-  duration: 800,
+  duration: 650,
   easing: 'ease-out-cubic',
-  once: false,
-  offset: 60,
+  once: true,
+  offset: 40,
   delay: 0,
+  mirror: false,
 })

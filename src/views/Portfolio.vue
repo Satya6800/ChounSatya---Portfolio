@@ -106,7 +106,7 @@ const projects = ref([
       'Monthly Users': '20k+',
       'Rating': '4.9★'
     },
-    link: 'https://jubpet.linkpc.net',
+    link: 'https://jubpet-frontend.g2.ant.com.kh/doctors',
     github: 'https://github.com/Satya6800/JubPet-Frontend'
   },
   {
@@ -439,7 +439,7 @@ const filteredProjects = computed(() => {
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   display: flex;
   align-items: center;
   padding: 120px 20px 60px;

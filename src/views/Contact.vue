@@ -107,7 +107,7 @@ const copyEmail = async () => {
   padding: 120px 0 80px;
   color: var(--contact-page-color);
   overflow: hidden;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .background-layer {

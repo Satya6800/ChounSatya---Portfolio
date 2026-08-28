@@ -116,10 +116,17 @@
               <div class="marker-dot"></div>
             </div>
             <div class="timeline-content">
-              <div class="company-thumbnail logos-3">
-                <img src="../assets/image/ANT.png" alt="ANT Technology Training Center">
-                <img src="../assets/image/MPTC.png" alt="MPTC">
-                <img src="../assets/image/CBRD_Fund.png" alt="CBRD Fund">
+              <!-- 3-Column Sponsor & Training Logos -->
+              <div class="logos-3-grid">
+                <div class="logo-card" title="ANT Technology Training Center">
+                  <img src="../assets/image/ANT.png" alt="ANT Technology Training Center">
+                </div>
+                <div class="logo-card" title="Ministry of Post and Telecommunications (MPTC)">
+                  <img src="../assets/image/MPTC.png" alt="MPTC">
+                </div>
+                <div class="logo-card" title="CBRD Fund">
+                  <img src="../assets/image/CBRD_Fund.png" alt="CBRD Fund">
+                </div>
               </div>
               <div class="timeline-header">
                 <h4>Web Development Training (100% Scholarship)</h4>
@@ -198,7 +205,7 @@
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Poppins', sans-serif;
   padding: 140px 0 80px;
 }
 
@@ -670,27 +677,61 @@
   padding: 4px;
 }
 
-.company-thumbnail.logos-3 {
+/* ===== 3-COLUMN LOGOS GRID ===== */
+.logos-3-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
   width: 100%;
-  max-width: 100%;
-  height: auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 16px;
-  background: white;
-  padding: 8px 16px;
-  box-sizing: border-box;
+  margin-bottom: 18px;
 }
 
-.company-thumbnail.logos-3 img {
+.logo-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 10px 14px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  overflow: hidden;
+}
+
+.logo-card:hover {
+  border-color: var(--border-active);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.2);
+}
+
+.logo-card img {
+  max-width: 100%;
+  max-height: 44px;
   width: auto;
   height: auto;
-  max-height: 48px;
-  padding: 0;
   object-fit: contain;
-  max-width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.logo-card:hover img {
+  transform: scale(1.06);
+}
+
+@media (max-width: 576px) {
+  .logos-3-grid {
+    gap: 8px;
+  }
+  .logo-card {
+    height: 52px;
+    padding: 6px 8px;
+    border-radius: 10px;
+  }
+  .logo-card img {
+    max-height: 36px;
+  }
 }
 
 .timeline-header {

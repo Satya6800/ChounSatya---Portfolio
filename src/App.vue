@@ -1,4 +1,6 @@
 <script setup>
+import { onMounted, nextTick } from 'vue';
+import AOS from 'aos';
 import Navbar from './components/Navbar.vue';
 import ScrollToTop from './components/ScrollToTop.vue';
 import TechBackground from './components/TechBackground.vue';
@@ -8,6 +10,15 @@ import Portfolio from './views/Portfolio.vue';
 import Services from './views/Services.vue';
 import Skills from './views/Skills.vue';
 import Contact from './views/Contact.vue';
+
+onMounted(() => {
+  nextTick(() => {
+    AOS.refreshHard();
+  });
+  window.addEventListener('load', () => {
+    AOS.refreshHard();
+  });
+});
 </script>
 
 <template>

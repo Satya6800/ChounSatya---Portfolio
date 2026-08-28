@@ -66,13 +66,14 @@ defineProps({
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--border-color);
-  border-radius: 24px;
+  border-radius: 16px;
   overflow: hidden;
   transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
   height: 100%;
   display: flex;
   flex-direction: column;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-card);
+  font-family: 'Poppins', sans-serif;
 }
 
 .card-glow {
@@ -217,11 +218,12 @@ defineProps({
 }
 
 .project-title {
-  font-size: 19px;
-  font-weight: 800;
+  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
   color: var(--text-primary);
   margin: 0 0 10px 0;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.3px;
   line-height: 1.3;
 }
 
